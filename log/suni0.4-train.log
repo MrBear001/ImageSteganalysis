@@ -1,0 +1,2590 @@
+nohup: ignoring input
+Random seed set to 42, and cuDNN is configured for deterministic behavior.
+torch version:  2.7.0+cu128
+train_cover_path =  /root/autodl-tmp/new-dataset-huafen/S-UNIWARD/0.4bpp/train/cover
+valid_cover_path =  /root/autodl-tmp/new-dataset-huafen/S-UNIWARD/0.4bpp/valid/cover
+test_cover_path =  /root/autodl-tmp/new-dataset-huafen/S-UNIWARD/0.4bpp/test/cover
+train_batch_size =  16
+test_batch_size =  32
+lwenet(
+  (Dense_layers): DenseNet_Add_1(
+    (features): Sequential(
+      (norm0): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (relu0): ReLU(inplace=True)
+      (denseblock1): _DenseBlock_Add(
+        (denselayer1): _DenseLayer(
+          (norm1): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu1): ReLU(inplace=True)
+          (conv1): Conv2d(30, 30, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (norm2): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu2): ReLU(inplace=True)
+          (conv2): Conv2d(30, 30, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+        (denselayer2): _DenseLayer(
+          (norm1): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu1): ReLU(inplace=True)
+          (conv1): Conv2d(30, 30, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (norm2): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu2): ReLU(inplace=True)
+          (conv2): Conv2d(30, 30, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+        (denselayer3): _DenseLayer(
+          (norm1): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu1): ReLU(inplace=True)
+          (conv1): Conv2d(30, 30, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (norm2): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu2): ReLU(inplace=True)
+          (conv2): Conv2d(30, 30, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+        (denselayer4): _DenseLayer(
+          (norm1): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu1): ReLU(inplace=True)
+          (conv1): Conv2d(30, 30, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (norm2): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu2): ReLU(inplace=True)
+          (conv2): Conv2d(30, 30, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+        (denselayer5): _DenseLayer(
+          (norm1): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu1): ReLU(inplace=True)
+          (conv1): Conv2d(30, 30, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (norm2): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu2): ReLU(inplace=True)
+          (conv2): Conv2d(30, 30, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+        (denselayer6): _DenseLayer(
+          (norm1): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu1): ReLU(inplace=True)
+          (conv1): Conv2d(30, 30, kernel_size=(1, 1), stride=(1, 1), bias=False)
+          (norm2): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+          (relu2): ReLU(inplace=True)
+          (conv2): Conv2d(30, 30, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+        )
+      )
+      (transition1): _Transition(
+        (norm): BatchNorm2d(30, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        (relu): ReLU(inplace=True)
+        (conv): Conv2d(30, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (pool): AvgPool2d(kernel_size=2, stride=2, padding=0)
+      )
+    )
+  )
+  (layer5): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (layer5_BN): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer5_AC): ReLU()
+  (layer6): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (layer6_BN): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer6_AC): ReLU()
+  (avgpooling2): AvgPool2d(kernel_size=3, stride=2, padding=1)
+  (layer7): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (layer7_BN): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer7_AC): ReLU()
+  (layer8): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (layer8_BN): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer8_AC): ReLU()
+  (avgpooling3): AvgPool2d(kernel_size=3, stride=2, padding=1)
+  (layer9): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+  (layer9_BN): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer9_AC): ReLU()
+  (layer10): Sepconv(
+    (conv1): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=128)
+    (conv2): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+  )
+  (layer10_BN): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (layer10_AC): ReLU()
+  (GAP): AdaptiveAvgPool2d(output_size=(1, 1))
+  (L2_norm): L2_nrom()
+  (L1_norm): L2_nrom()
+  (fc1): Linear(in_features=768, out_features=2, bias=True)
+)
+----------------------------------------------------------------
+        Layer (type)               Output Shape         Param #
+================================================================
+       BatchNorm2d-1         [-1, 30, 256, 256]              60
+              ReLU-2         [-1, 30, 256, 256]               0
+       BatchNorm2d-3         [-1, 30, 256, 256]              60
+              ReLU-4         [-1, 30, 256, 256]               0
+            Conv2d-5         [-1, 30, 256, 256]             900
+       BatchNorm2d-6         [-1, 30, 256, 256]              60
+              ReLU-7         [-1, 30, 256, 256]               0
+            Conv2d-8         [-1, 30, 256, 256]           8,100
+       _DenseLayer-9         [-1, 30, 256, 256]               0
+      BatchNorm2d-10         [-1, 30, 256, 256]              60
+             ReLU-11         [-1, 30, 256, 256]               0
+           Conv2d-12         [-1, 30, 256, 256]             900
+      BatchNorm2d-13         [-1, 30, 256, 256]              60
+             ReLU-14         [-1, 30, 256, 256]               0
+           Conv2d-15         [-1, 30, 256, 256]           8,100
+      _DenseLayer-16         [-1, 30, 256, 256]               0
+      BatchNorm2d-17         [-1, 30, 256, 256]              60
+             ReLU-18         [-1, 30, 256, 256]               0
+           Conv2d-19         [-1, 30, 256, 256]             900
+      BatchNorm2d-20         [-1, 30, 256, 256]              60
+             ReLU-21         [-1, 30, 256, 256]               0
+           Conv2d-22         [-1, 30, 256, 256]           8,100
+      _DenseLayer-23         [-1, 30, 256, 256]               0
+      BatchNorm2d-24         [-1, 30, 256, 256]              60
+             ReLU-25         [-1, 30, 256, 256]               0
+           Conv2d-26         [-1, 30, 256, 256]             900
+      BatchNorm2d-27         [-1, 30, 256, 256]              60
+             ReLU-28         [-1, 30, 256, 256]               0
+           Conv2d-29         [-1, 30, 256, 256]           8,100
+      _DenseLayer-30         [-1, 30, 256, 256]               0
+      BatchNorm2d-31         [-1, 30, 256, 256]              60
+             ReLU-32         [-1, 30, 256, 256]               0
+           Conv2d-33         [-1, 30, 256, 256]             900
+      BatchNorm2d-34         [-1, 30, 256, 256]              60
+             ReLU-35         [-1, 30, 256, 256]               0
+           Conv2d-36         [-1, 30, 256, 256]           8,100
+      _DenseLayer-37         [-1, 30, 256, 256]               0
+      BatchNorm2d-38         [-1, 30, 256, 256]              60
+             ReLU-39         [-1, 30, 256, 256]               0
+           Conv2d-40         [-1, 30, 256, 256]             900
+      BatchNorm2d-41         [-1, 30, 256, 256]              60
+             ReLU-42         [-1, 30, 256, 256]               0
+           Conv2d-43         [-1, 30, 256, 256]           8,100
+      _DenseLayer-44         [-1, 30, 256, 256]               0
+  _DenseBlock_Add-45         [-1, 30, 256, 256]               0
+      BatchNorm2d-46         [-1, 30, 256, 256]              60
+             ReLU-47         [-1, 30, 256, 256]               0
+           Conv2d-48         [-1, 32, 256, 256]             960
+        AvgPool2d-49         [-1, 32, 128, 128]               0
+   DenseNet_Add_1-50         [-1, 32, 128, 128]               0
+           Conv2d-51         [-1, 32, 128, 128]           9,248
+      BatchNorm2d-52         [-1, 32, 128, 128]              64
+             ReLU-53         [-1, 32, 128, 128]               0
+           Conv2d-54         [-1, 64, 128, 128]          18,496
+      BatchNorm2d-55         [-1, 64, 128, 128]             128
+             ReLU-56         [-1, 64, 128, 128]               0
+        AvgPool2d-57           [-1, 64, 64, 64]               0
+           Conv2d-58           [-1, 64, 64, 64]          36,928
+      BatchNorm2d-59           [-1, 64, 64, 64]             128
+             ReLU-60           [-1, 64, 64, 64]               0
+           Conv2d-61          [-1, 128, 64, 64]          73,856
+      BatchNorm2d-62          [-1, 128, 64, 64]             256
+             ReLU-63          [-1, 128, 64, 64]               0
+        AvgPool2d-64          [-1, 128, 32, 32]               0
+           Conv2d-65          [-1, 128, 32, 32]         147,584
+      BatchNorm2d-66          [-1, 128, 32, 32]             256
+             ReLU-67          [-1, 128, 32, 32]               0
+           Conv2d-68          [-1, 128, 32, 32]           1,280
+           Conv2d-69          [-1, 256, 32, 32]          33,024
+          Sepconv-70          [-1, 256, 32, 32]               0
+      BatchNorm2d-71          [-1, 256, 32, 32]             512
+             ReLU-72          [-1, 256, 32, 32]               0
+AdaptiveAvgPool2d-73            [-1, 256, 1, 1]               0
+          L2_nrom-74            [-1, 256, 1, 1]               0
+          L2_nrom-75            [-1, 256, 1, 1]               0
+           Linear-76                    [-1, 2]           1,538
+================================================================
+Total params: 379,098
+Trainable params: 379,098
+Non-trainable params: 0
+----------------------------------------------------------------
+Input size (MB): 0.25
+Forward/backward pass size (MB): 798.01
+Params size (MB): 1.45
+Estimated Total Size (MB): 799.70
+----------------------------------------------------------------
+None
+Current learning rate: 0.01
+Train Epoch: 1 [800/4000 (20%)]	train_accuracy: 0.531250	Loss: 0.690070
+Train Epoch: 1 [1600/4000 (40%)]	train_accuracy: 0.531250	Loss: 0.693180
+Train Epoch: 1 [2400/4000 (60%)]	train_accuracy: 0.531250	Loss: 0.698822
+Train Epoch: 1 [3200/4000 (80%)]	train_accuracy: 0.531250	Loss: 0.676715
+Train Epoch: 1 [4000/4000 (100%)]	train_accuracy: 0.562500	Loss: 0.686949
+train Epoch: 1	avgLoss: 0.689516
+Valid set: Average loss: 0.9229, Accuracy: 1011.0/2000 (50.550000%)
+
+Test set: Average loss: 0.9368, Accuracy: 5057.0/10000 (50.570000%)
+
+Epoch 1: Model weights saved to checkpoints/lwenet_epoch_1.pkl
+Current learning rate: 0.01
+Train Epoch: 2 [800/4000 (20%)]	train_accuracy: 0.687500	Loss: 0.639037
+Train Epoch: 2 [1600/4000 (40%)]	train_accuracy: 0.531250	Loss: 0.693125
+Train Epoch: 2 [2400/4000 (60%)]	train_accuracy: 0.625000	Loss: 0.664630
+Train Epoch: 2 [3200/4000 (80%)]	train_accuracy: 0.562500	Loss: 0.684169
+Train Epoch: 2 [4000/4000 (100%)]	train_accuracy: 0.562500	Loss: 0.673111
+train Epoch: 2	avgLoss: 0.668705
+Valid set: Average loss: 1.1126, Accuracy: 1013.0/2000 (50.650000%)
+
+Test set: Average loss: 1.1332, Accuracy: 5079.0/10000 (50.790000%)
+
+Epoch 2: Model weights saved to checkpoints/lwenet_epoch_2.pkl
+Current learning rate: 0.01
+Train Epoch: 3 [800/4000 (20%)]	train_accuracy: 0.562500	Loss: 0.611042
+Train Epoch: 3 [1600/4000 (40%)]	train_accuracy: 0.656250	Loss: 0.592656
+Train Epoch: 3 [2400/4000 (60%)]	train_accuracy: 0.562500	Loss: 0.724883
+Train Epoch: 3 [3200/4000 (80%)]	train_accuracy: 0.625000	Loss: 0.617261
+Train Epoch: 3 [4000/4000 (100%)]	train_accuracy: 0.562500	Loss: 0.626944
+train Epoch: 3	avgLoss: 0.641945
+Valid set: Average loss: 0.6522, Accuracy: 1172.0/2000 (58.600000%)
+
+Test set: Average loss: 0.6643, Accuracy: 5904.0/10000 (59.040000%)
+
+Epoch 3: Model weights saved to checkpoints/lwenet_epoch_3.pkl
+Current learning rate: 0.01
+Train Epoch: 4 [800/4000 (20%)]	train_accuracy: 0.687500	Loss: 0.507443
+Train Epoch: 4 [1600/4000 (40%)]	train_accuracy: 0.562500	Loss: 0.647933
+Train Epoch: 4 [2400/4000 (60%)]	train_accuracy: 0.625000	Loss: 0.519915
+Train Epoch: 4 [3200/4000 (80%)]	train_accuracy: 0.593750	Loss: 0.668773
+Train Epoch: 4 [4000/4000 (100%)]	train_accuracy: 0.625000	Loss: 0.562121
+train Epoch: 4	avgLoss: 0.589778
+Valid set: Average loss: 0.8144, Accuracy: 1090.0/2000 (54.500000%)
+
+Test set: Average loss: 0.8157, Accuracy: 5492.0/10000 (54.920000%)
+
+Epoch 4: Model weights saved to checkpoints/lwenet_epoch_4.pkl
+Current learning rate: 0.01
+Train Epoch: 5 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.487776
+Train Epoch: 5 [1600/4000 (40%)]	train_accuracy: 0.625000	Loss: 0.699292
+Train Epoch: 5 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.512337
+Train Epoch: 5 [3200/4000 (80%)]	train_accuracy: 0.656250	Loss: 0.654401
+Train Epoch: 5 [4000/4000 (100%)]	train_accuracy: 0.656250	Loss: 0.592170
+train Epoch: 5	avgLoss: 0.582740
+Valid set: Average loss: 0.5849, Accuracy: 1316.0/2000 (65.800000%)
+
+Test set: Average loss: 0.5869, Accuracy: 6582.0/10000 (65.820000%)
+
+Epoch 5: Model weights saved to checkpoints/lwenet_epoch_5.pkl
+Current learning rate: 0.01
+Train Epoch: 6 [800/4000 (20%)]	train_accuracy: 0.625000	Loss: 0.665600
+Train Epoch: 6 [1600/4000 (40%)]	train_accuracy: 0.656250	Loss: 0.546442
+Train Epoch: 6 [2400/4000 (60%)]	train_accuracy: 0.687500	Loss: 0.642307
+Train Epoch: 6 [3200/4000 (80%)]	train_accuracy: 0.687500	Loss: 0.514202
+Train Epoch: 6 [4000/4000 (100%)]	train_accuracy: 0.593750	Loss: 0.659165
+train Epoch: 6	avgLoss: 0.555069
+Valid set: Average loss: 3.7321, Accuracy: 1000.0/2000 (50.000000%)
+
+Test set: Average loss: 3.8446, Accuracy: 5000.0/10000 (50.000000%)
+
+Epoch 6: Model weights saved to checkpoints/lwenet_epoch_6.pkl
+Current learning rate: 0.01
+Train Epoch: 7 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.540707
+Train Epoch: 7 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.482036
+Train Epoch: 7 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.426082
+Train Epoch: 7 [3200/4000 (80%)]	train_accuracy: 0.687500	Loss: 0.522530
+Train Epoch: 7 [4000/4000 (100%)]	train_accuracy: 0.687500	Loss: 0.647677
+train Epoch: 7	avgLoss: 0.562930
+Valid set: Average loss: 1.3411, Accuracy: 1041.0/2000 (52.050000%)
+
+Test set: Average loss: 1.3383, Accuracy: 5225.0/10000 (52.250000%)
+
+Epoch 7: Model weights saved to checkpoints/lwenet_epoch_7.pkl
+Current learning rate: 0.01
+Train Epoch: 8 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.441877
+Train Epoch: 8 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.437945
+Train Epoch: 8 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.406971
+Train Epoch: 8 [3200/4000 (80%)]	train_accuracy: 0.656250	Loss: 0.577439
+Train Epoch: 8 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.429329
+train Epoch: 8	avgLoss: 0.515792
+Valid set: Average loss: 1.0433, Accuracy: 1156.0/2000 (57.800000%)
+
+Test set: Average loss: 1.0261, Accuracy: 5841.0/10000 (58.410000%)
+
+Epoch 8: Model weights saved to checkpoints/lwenet_epoch_8.pkl
+Current learning rate: 0.01
+Train Epoch: 9 [800/4000 (20%)]	train_accuracy: 0.687500	Loss: 0.602490
+Train Epoch: 9 [1600/4000 (40%)]	train_accuracy: 0.718750	Loss: 0.467275
+Train Epoch: 9 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.453766
+Train Epoch: 9 [3200/4000 (80%)]	train_accuracy: 0.593750	Loss: 1.050932
+Train Epoch: 9 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.396772
+train Epoch: 9	avgLoss: 0.504670
+Valid set: Average loss: 0.8632, Accuracy: 1236.0/2000 (61.800000%)
+
+Test set: Average loss: 0.8643, Accuracy: 6211.0/10000 (62.110000%)
+
+Epoch 9: Model weights saved to checkpoints/lwenet_epoch_9.pkl
+Current learning rate: 0.01
+Train Epoch: 10 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.555895
+Train Epoch: 10 [1600/4000 (40%)]	train_accuracy: 0.687500	Loss: 0.585320
+Train Epoch: 10 [2400/4000 (60%)]	train_accuracy: 0.593750	Loss: 0.815990
+Train Epoch: 10 [3200/4000 (80%)]	train_accuracy: 0.718750	Loss: 0.598616
+Train Epoch: 10 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.427546
+train Epoch: 10	avgLoss: 0.504696
+Valid set: Average loss: 0.9336, Accuracy: 1136.0/2000 (56.800000%)
+
+Test set: Average loss: 0.9250, Accuracy: 5752.0/10000 (57.520000%)
+
+Epoch 10: Model weights saved to checkpoints/lwenet_epoch_10.pkl
+Current learning rate: 0.01
+Train Epoch: 11 [800/4000 (20%)]	train_accuracy: 0.687500	Loss: 0.653311
+Train Epoch: 11 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.443978
+Train Epoch: 11 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.356491
+Train Epoch: 11 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.477922
+Train Epoch: 11 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.471760
+train Epoch: 11	avgLoss: 0.486581
+Valid set: Average loss: 0.6292, Accuracy: 1322.0/2000 (66.100000%)
+
+Test set: Average loss: 0.6114, Accuracy: 6708.0/10000 (67.080000%)
+
+Epoch 11: Model weights saved to checkpoints/lwenet_epoch_11.pkl
+Current learning rate: 0.01
+Train Epoch: 12 [800/4000 (20%)]	train_accuracy: 0.718750	Loss: 0.431416
+Train Epoch: 12 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.429704
+Train Epoch: 12 [2400/4000 (60%)]	train_accuracy: 0.718750	Loss: 0.433258
+Train Epoch: 12 [3200/4000 (80%)]	train_accuracy: 0.656250	Loss: 0.849271
+Train Epoch: 12 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.384024
+train Epoch: 12	avgLoss: 0.490376
+Valid set: Average loss: 0.7552, Accuracy: 1253.0/2000 (62.650000%)
+
+Test set: Average loss: 0.7901, Accuracy: 6219.0/10000 (62.190000%)
+
+Epoch 12: Model weights saved to checkpoints/lwenet_epoch_12.pkl
+Current learning rate: 0.01
+Train Epoch: 13 [800/4000 (20%)]	train_accuracy: 0.687500	Loss: 0.541778
+Train Epoch: 13 [1600/4000 (40%)]	train_accuracy: 0.718750	Loss: 0.457778
+Train Epoch: 13 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.726074
+Train Epoch: 13 [3200/4000 (80%)]	train_accuracy: 0.593750	Loss: 0.633771
+Train Epoch: 13 [4000/4000 (100%)]	train_accuracy: 0.718750	Loss: 0.490701
+train Epoch: 13	avgLoss: 0.478140
+Valid set: Average loss: 0.8004, Accuracy: 1307.0/2000 (65.350000%)
+
+Test set: Average loss: 0.7694, Accuracy: 6662.0/10000 (66.620000%)
+
+Epoch 13: Model weights saved to checkpoints/lwenet_epoch_13.pkl
+Current learning rate: 0.01
+Train Epoch: 14 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.577243
+Train Epoch: 14 [1600/4000 (40%)]	train_accuracy: 0.718750	Loss: 0.566218
+Train Epoch: 14 [2400/4000 (60%)]	train_accuracy: 0.718750	Loss: 0.443180
+Train Epoch: 14 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.363047
+Train Epoch: 14 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.331235
+train Epoch: 14	avgLoss: 0.479684
+Valid set: Average loss: 1.1839, Accuracy: 1175.0/2000 (58.750000%)
+
+Test set: Average loss: 1.1875, Accuracy: 5934.0/10000 (59.340000%)
+
+Epoch 14: Model weights saved to checkpoints/lwenet_epoch_14.pkl
+Current learning rate: 0.01
+Train Epoch: 15 [800/4000 (20%)]	train_accuracy: 0.718750	Loss: 0.404650
+Train Epoch: 15 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.547943
+Train Epoch: 15 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.460111
+Train Epoch: 15 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.429306
+Train Epoch: 15 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.404979
+train Epoch: 15	avgLoss: 0.494185
+Valid set: Average loss: 0.9482, Accuracy: 1213.0/2000 (60.650000%)
+
+Test set: Average loss: 0.9257, Accuracy: 6130.0/10000 (61.300000%)
+
+Epoch 15: Model weights saved to checkpoints/lwenet_epoch_15.pkl
+Current learning rate: 0.01
+Train Epoch: 16 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.267784
+Train Epoch: 16 [1600/4000 (40%)]	train_accuracy: 0.656250	Loss: 0.540058
+Train Epoch: 16 [2400/4000 (60%)]	train_accuracy: 0.656250	Loss: 0.927567
+Train Epoch: 16 [3200/4000 (80%)]	train_accuracy: 0.718750	Loss: 0.491216
+Train Epoch: 16 [4000/4000 (100%)]	train_accuracy: 0.718750	Loss: 0.566281
+train Epoch: 16	avgLoss: 0.486078
+Valid set: Average loss: 2.9869, Accuracy: 1007.0/2000 (50.350000%)
+
+Test set: Average loss: 3.0245, Accuracy: 5036.0/10000 (50.360000%)
+
+Epoch 16: Model weights saved to checkpoints/lwenet_epoch_16.pkl
+Current learning rate: 0.01
+Train Epoch: 17 [800/4000 (20%)]	train_accuracy: 0.718750	Loss: 0.538873
+Train Epoch: 17 [1600/4000 (40%)]	train_accuracy: 0.687500	Loss: 0.620425
+Train Epoch: 17 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.295052
+Train Epoch: 17 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.490861
+Train Epoch: 17 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.330417
+train Epoch: 17	avgLoss: 0.457649
+Valid set: Average loss: 0.4917, Accuracy: 1475.0/2000 (73.750000%)
+
+Test set: Average loss: 0.4716, Accuracy: 7486.0/10000 (74.860000%)
+
+Epoch 17: Model weights saved to checkpoints/lwenet_epoch_17.pkl
+Current learning rate: 0.01
+Train Epoch: 18 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.331860
+Train Epoch: 18 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.294062
+Train Epoch: 18 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.331768
+Train Epoch: 18 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.438336
+Train Epoch: 18 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.383497
+train Epoch: 18	avgLoss: 0.417588
+Valid set: Average loss: 0.5338, Accuracy: 1469.0/2000 (73.450000%)
+
+Test set: Average loss: 0.5290, Accuracy: 7326.0/10000 (73.260000%)
+
+Epoch 18: Model weights saved to checkpoints/lwenet_epoch_18.pkl
+Current learning rate: 0.01
+Train Epoch: 19 [800/4000 (20%)]	train_accuracy: 0.687500	Loss: 0.415546
+Train Epoch: 19 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.672243
+Train Epoch: 19 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.445678
+Train Epoch: 19 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.325357
+Train Epoch: 19 [4000/4000 (100%)]	train_accuracy: 0.718750	Loss: 0.685349
+train Epoch: 19	avgLoss: 0.452980
+Valid set: Average loss: 1.3005, Accuracy: 1127.0/2000 (56.350000%)
+
+Test set: Average loss: 1.2839, Accuracy: 5776.0/10000 (57.760000%)
+
+Epoch 19: Model weights saved to checkpoints/lwenet_epoch_19.pkl
+Current learning rate: 0.01
+Train Epoch: 20 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.383627
+Train Epoch: 20 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.479923
+Train Epoch: 20 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.308727
+Train Epoch: 20 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.343334
+Train Epoch: 20 [4000/4000 (100%)]	train_accuracy: 0.625000	Loss: 0.908265
+train Epoch: 20	avgLoss: 0.429529
+Valid set: Average loss: 0.7394, Accuracy: 1373.0/2000 (68.650000%)
+
+Test set: Average loss: 0.7078, Accuracy: 7008.0/10000 (70.080000%)
+
+Epoch 20: Model weights saved to checkpoints/lwenet_epoch_20.pkl
+Current learning rate: 0.01
+Train Epoch: 21 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.371441
+Train Epoch: 21 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.410139
+Train Epoch: 21 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.250790
+Train Epoch: 21 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.542023
+Train Epoch: 21 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.437131
+train Epoch: 21	avgLoss: 0.452870
+Valid set: Average loss: 0.5820, Accuracy: 1388.0/2000 (69.400000%)
+
+Test set: Average loss: 0.5681, Accuracy: 7056.0/10000 (70.560000%)
+
+Epoch 21: Model weights saved to checkpoints/lwenet_epoch_21.pkl
+Current learning rate: 0.01
+Train Epoch: 22 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.463721
+Train Epoch: 22 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.442199
+Train Epoch: 22 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.265908
+Train Epoch: 22 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.311762
+Train Epoch: 22 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.347074
+train Epoch: 22	avgLoss: 0.396160
+Valid set: Average loss: 0.4039, Accuracy: 1562.0/2000 (78.100000%)
+
+Test set: Average loss: 0.3807, Accuracy: 7921.0/10000 (79.210000%)
+
+Epoch 22: Model weights saved to checkpoints/lwenet_epoch_22.pkl
+Current learning rate: 0.01
+Train Epoch: 23 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.489278
+Train Epoch: 23 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.320860
+Train Epoch: 23 [2400/4000 (60%)]	train_accuracy: 0.718750	Loss: 0.346902
+Train Epoch: 23 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.334439
+Train Epoch: 23 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.493340
+train Epoch: 23	avgLoss: 0.410291
+Valid set: Average loss: 1.0706, Accuracy: 1290.0/2000 (64.500000%)
+
+Test set: Average loss: 1.0205, Accuracy: 6549.0/10000 (65.490000%)
+
+Epoch 23: Model weights saved to checkpoints/lwenet_epoch_23.pkl
+Current learning rate: 0.01
+Train Epoch: 24 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.334726
+Train Epoch: 24 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.268362
+Train Epoch: 24 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.331876
+Train Epoch: 24 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.367849
+Train Epoch: 24 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.433948
+train Epoch: 24	avgLoss: 0.380287
+Valid set: Average loss: 2.5546, Accuracy: 1147.0/2000 (57.350000%)
+
+Test set: Average loss: 2.5150, Accuracy: 5878.0/10000 (58.780000%)
+
+Epoch 24: Model weights saved to checkpoints/lwenet_epoch_24.pkl
+Current learning rate: 0.01
+Train Epoch: 25 [800/4000 (20%)]	train_accuracy: 0.687500	Loss: 0.656290
+Train Epoch: 25 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.301762
+Train Epoch: 25 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.350271
+Train Epoch: 25 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.275725
+Train Epoch: 25 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.234108
+train Epoch: 25	avgLoss: 0.399901
+Valid set: Average loss: 0.5121, Accuracy: 1501.0/2000 (75.050000%)
+
+Test set: Average loss: 0.4840, Accuracy: 7630.0/10000 (76.300000%)
+
+Epoch 25: Model weights saved to checkpoints/lwenet_epoch_25.pkl
+Current learning rate: 0.01
+Train Epoch: 26 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.233922
+Train Epoch: 26 [1600/4000 (40%)]	train_accuracy: 0.718750	Loss: 0.451950
+Train Epoch: 26 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.407542
+Train Epoch: 26 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.382945
+Train Epoch: 26 [4000/4000 (100%)]	train_accuracy: 0.687500	Loss: 0.559168
+train Epoch: 26	avgLoss: 0.391406
+Valid set: Average loss: 1.6209, Accuracy: 1182.0/2000 (59.100000%)
+
+Test set: Average loss: 1.6227, Accuracy: 5985.0/10000 (59.850000%)
+
+Epoch 26: Model weights saved to checkpoints/lwenet_epoch_26.pkl
+Current learning rate: 0.01
+Train Epoch: 27 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.425558
+Train Epoch: 27 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.448873
+Train Epoch: 27 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.338966
+Train Epoch: 27 [3200/4000 (80%)]	train_accuracy: 0.718750	Loss: 0.441312
+Train Epoch: 27 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.359436
+train Epoch: 27	avgLoss: 0.364116
+Valid set: Average loss: 0.4225, Accuracy: 1567.0/2000 (78.350000%)
+
+Test set: Average loss: 0.3952, Accuracy: 8055.0/10000 (80.550000%)
+
+Epoch 27: Model weights saved to checkpoints/lwenet_epoch_27.pkl
+Current learning rate: 0.01
+Train Epoch: 28 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.337865
+Train Epoch: 28 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.360989
+Train Epoch: 28 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.242067
+Train Epoch: 28 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.300946
+Train Epoch: 28 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.353333
+train Epoch: 28	avgLoss: 0.350461
+Valid set: Average loss: 0.5815, Accuracy: 1378.0/2000 (68.900000%)
+
+Test set: Average loss: 0.5537, Accuracy: 7061.0/10000 (70.610000%)
+
+Epoch 28: Model weights saved to checkpoints/lwenet_epoch_28.pkl
+Current learning rate: 0.01
+Train Epoch: 29 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.344345
+Train Epoch: 29 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.371857
+Train Epoch: 29 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.249374
+Train Epoch: 29 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.292349
+Train Epoch: 29 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.306521
+train Epoch: 29	avgLoss: 0.368035
+Valid set: Average loss: 0.4737, Accuracy: 1570.0/2000 (78.500000%)
+
+Test set: Average loss: 0.4509, Accuracy: 7946.0/10000 (79.460000%)
+
+Epoch 29: Model weights saved to checkpoints/lwenet_epoch_29.pkl
+Current learning rate: 0.01
+Train Epoch: 30 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.393450
+Train Epoch: 30 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.233823
+Train Epoch: 30 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.188807
+Train Epoch: 30 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.252741
+Train Epoch: 30 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.303331
+train Epoch: 30	avgLoss: 0.354332
+Valid set: Average loss: 2.1467, Accuracy: 1182.0/2000 (59.100000%)
+
+Test set: Average loss: 2.1088, Accuracy: 5977.0/10000 (59.770000%)
+
+Epoch 30: Model weights saved to checkpoints/lwenet_epoch_30.pkl
+Current learning rate: 0.01
+Train Epoch: 31 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.428356
+Train Epoch: 31 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.318653
+Train Epoch: 31 [2400/4000 (60%)]	train_accuracy: 0.687500	Loss: 0.618054
+Train Epoch: 31 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.247116
+Train Epoch: 31 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.211903
+train Epoch: 31	avgLoss: 0.401699
+Valid set: Average loss: 0.4475, Accuracy: 1554.0/2000 (77.700000%)
+
+Test set: Average loss: 0.4153, Accuracy: 7904.0/10000 (79.040000%)
+
+Epoch 31: Model weights saved to checkpoints/lwenet_epoch_31.pkl
+Current learning rate: 0.01
+Train Epoch: 32 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.323329
+Train Epoch: 32 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.507303
+Train Epoch: 32 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.266103
+Train Epoch: 32 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.448944
+Train Epoch: 32 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.440328
+train Epoch: 32	avgLoss: 0.338389
+Valid set: Average loss: 0.8205, Accuracy: 1399.0/2000 (69.950000%)
+
+Test set: Average loss: 0.7919, Accuracy: 7100.0/10000 (71.000000%)
+
+Epoch 32: Model weights saved to checkpoints/lwenet_epoch_32.pkl
+Current learning rate: 0.01
+Train Epoch: 33 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.233797
+Train Epoch: 33 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.305011
+Train Epoch: 33 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.285210
+Train Epoch: 33 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.324096
+Train Epoch: 33 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.265620
+train Epoch: 33	avgLoss: 0.334788
+Valid set: Average loss: 0.4784, Accuracy: 1567.0/2000 (78.350000%)
+
+Test set: Average loss: 0.5177, Accuracy: 7737.0/10000 (77.370000%)
+
+Epoch 33: Model weights saved to checkpoints/lwenet_epoch_33.pkl
+Current learning rate: 0.01
+Train Epoch: 34 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.412212
+Train Epoch: 34 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.344903
+Train Epoch: 34 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.305676
+Train Epoch: 34 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.294256
+Train Epoch: 34 [4000/4000 (100%)]	train_accuracy: 0.718750	Loss: 0.688007
+train Epoch: 34	avgLoss: 0.344938
+Valid set: Average loss: 0.5361, Accuracy: 1555.0/2000 (77.750000%)
+
+Test set: Average loss: 0.5186, Accuracy: 7908.0/10000 (79.080000%)
+
+Epoch 34: Model weights saved to checkpoints/lwenet_epoch_34.pkl
+Current learning rate: 0.01
+Train Epoch: 35 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.285506
+Train Epoch: 35 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.274586
+Train Epoch: 35 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.301475
+Train Epoch: 35 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.281128
+Train Epoch: 35 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.356013
+train Epoch: 35	avgLoss: 0.332462
+Valid set: Average loss: 0.4541, Accuracy: 1586.0/2000 (79.300000%)
+
+Test set: Average loss: 0.4445, Accuracy: 7934.0/10000 (79.340000%)
+
+Epoch 35: Model weights saved to checkpoints/lwenet_epoch_35.pkl
+Current learning rate: 0.01
+Train Epoch: 36 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.321542
+Train Epoch: 36 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.291231
+Train Epoch: 36 [2400/4000 (60%)]	train_accuracy: 0.718750	Loss: 0.324293
+Train Epoch: 36 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.253648
+Train Epoch: 36 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.309453
+train Epoch: 36	avgLoss: 0.328889
+Valid set: Average loss: 0.3578, Accuracy: 1629.0/2000 (81.450000%)
+
+Test set: Average loss: 0.3504, Accuracy: 8185.0/10000 (81.850000%)
+
+Epoch 36: Model weights saved to checkpoints/lwenet_epoch_36.pkl
+Current learning rate: 0.01
+Train Epoch: 37 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.477908
+Train Epoch: 37 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.768835
+Train Epoch: 37 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.361242
+Train Epoch: 37 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.209806
+Train Epoch: 37 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.404477
+train Epoch: 37	avgLoss: 0.347767
+Valid set: Average loss: 0.3539, Accuracy: 1618.0/2000 (80.900000%)
+
+Test set: Average loss: 0.3477, Accuracy: 8146.0/10000 (81.460000%)
+
+Epoch 37: Model weights saved to checkpoints/lwenet_epoch_37.pkl
+Current learning rate: 0.01
+Train Epoch: 38 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.276827
+Train Epoch: 38 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.228695
+Train Epoch: 38 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.557458
+Train Epoch: 38 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.569049
+Train Epoch: 38 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.327797
+train Epoch: 38	avgLoss: 0.324953
+Valid set: Average loss: 0.7087, Accuracy: 1407.0/2000 (70.350000%)
+
+Test set: Average loss: 0.6815, Accuracy: 7114.0/10000 (71.140000%)
+
+Epoch 38: Model weights saved to checkpoints/lwenet_epoch_38.pkl
+Current learning rate: 0.01
+Train Epoch: 39 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.280572
+Train Epoch: 39 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.444238
+Train Epoch: 39 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.361411
+Train Epoch: 39 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.346762
+Train Epoch: 39 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.219388
+train Epoch: 39	avgLoss: 0.315023
+Valid set: Average loss: 1.0068, Accuracy: 1344.0/2000 (67.200000%)
+
+Test set: Average loss: 1.0093, Accuracy: 6766.0/10000 (67.660000%)
+
+Epoch 39: Model weights saved to checkpoints/lwenet_epoch_39.pkl
+Current learning rate: 0.01
+Train Epoch: 40 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.262452
+Train Epoch: 40 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.225100
+Train Epoch: 40 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.273627
+Train Epoch: 40 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.302632
+Train Epoch: 40 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.255471
+train Epoch: 40	avgLoss: 0.309031
+Valid set: Average loss: 0.6308, Accuracy: 1473.0/2000 (73.650000%)
+
+Test set: Average loss: 0.5856, Accuracy: 7468.0/10000 (74.680000%)
+
+Epoch 40: Model weights saved to checkpoints/lwenet_epoch_40.pkl
+Current learning rate: 0.01
+Train Epoch: 41 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.231635
+Train Epoch: 41 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.371758
+Train Epoch: 41 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.369741
+Train Epoch: 41 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.424313
+Train Epoch: 41 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.278417
+train Epoch: 41	avgLoss: 0.317164
+Valid set: Average loss: 1.1770, Accuracy: 1326.0/2000 (66.300000%)
+
+Test set: Average loss: 1.1880, Accuracy: 6733.0/10000 (67.330000%)
+
+Epoch 41: Model weights saved to checkpoints/lwenet_epoch_41.pkl
+Current learning rate: 0.01
+Train Epoch: 42 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.284448
+Train Epoch: 42 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.247967
+Train Epoch: 42 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.496165
+Train Epoch: 42 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.246954
+Train Epoch: 42 [4000/4000 (100%)]	train_accuracy: 0.687500	Loss: 0.573486
+train Epoch: 42	avgLoss: 0.330661
+Valid set: Average loss: 0.3520, Accuracy: 1654.0/2000 (82.700000%)
+
+Test set: Average loss: 0.3302, Accuracy: 8335.0/10000 (83.350000%)
+
+Epoch 42: Model weights saved to checkpoints/lwenet_epoch_42.pkl
+Current learning rate: 0.01
+Train Epoch: 43 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.283896
+Train Epoch: 43 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.259159
+Train Epoch: 43 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.510511
+Train Epoch: 43 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.265784
+Train Epoch: 43 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.351531
+train Epoch: 43	avgLoss: 0.311287
+Valid set: Average loss: 0.3511, Accuracy: 1643.0/2000 (82.150000%)
+
+Test set: Average loss: 0.3296, Accuracy: 8334.0/10000 (83.340000%)
+
+Epoch 43: Model weights saved to checkpoints/lwenet_epoch_43.pkl
+Current learning rate: 0.01
+Train Epoch: 44 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.227914
+Train Epoch: 44 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.545547
+Train Epoch: 44 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.373883
+Train Epoch: 44 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.488505
+Train Epoch: 44 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.297526
+train Epoch: 44	avgLoss: 0.318169
+Valid set: Average loss: 0.7916, Accuracy: 1473.0/2000 (73.650000%)
+
+Test set: Average loss: 0.7616, Accuracy: 7397.0/10000 (73.970000%)
+
+Epoch 44: Model weights saved to checkpoints/lwenet_epoch_44.pkl
+Current learning rate: 0.01
+Train Epoch: 45 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.373143
+Train Epoch: 45 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.316047
+Train Epoch: 45 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.247028
+Train Epoch: 45 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.270358
+Train Epoch: 45 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.274901
+train Epoch: 45	avgLoss: 0.356162
+Valid set: Average loss: 0.4565, Accuracy: 1612.0/2000 (80.600000%)
+
+Test set: Average loss: 0.4626, Accuracy: 8093.0/10000 (80.930000%)
+
+Epoch 45: Model weights saved to checkpoints/lwenet_epoch_45.pkl
+Current learning rate: 0.01
+Train Epoch: 46 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.208648
+Train Epoch: 46 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.253887
+Train Epoch: 46 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.548442
+Train Epoch: 46 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.307945
+Train Epoch: 46 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.227622
+train Epoch: 46	avgLoss: 0.294536
+Valid set: Average loss: 1.0369, Accuracy: 1361.0/2000 (68.050000%)
+
+Test set: Average loss: 1.0017, Accuracy: 6921.0/10000 (69.210000%)
+
+Epoch 46: Model weights saved to checkpoints/lwenet_epoch_46.pkl
+Current learning rate: 0.01
+Train Epoch: 47 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.525626
+Train Epoch: 47 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.393749
+Train Epoch: 47 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.167878
+Train Epoch: 47 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.264357
+Train Epoch: 47 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.345641
+train Epoch: 47	avgLoss: 0.296219
+Valid set: Average loss: 0.5959, Accuracy: 1516.0/2000 (75.800000%)
+
+Test set: Average loss: 0.5996, Accuracy: 7577.0/10000 (75.770000%)
+
+Epoch 47: Model weights saved to checkpoints/lwenet_epoch_47.pkl
+Current learning rate: 0.01
+Train Epoch: 48 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.633637
+Train Epoch: 48 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.251524
+Train Epoch: 48 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.130283
+Train Epoch: 48 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.205616
+Train Epoch: 48 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.255002
+train Epoch: 48	avgLoss: 0.326330
+Valid set: Average loss: 0.5447, Accuracy: 1541.0/2000 (77.050000%)
+
+Test set: Average loss: 0.5172, Accuracy: 7807.0/10000 (78.070000%)
+
+Epoch 48: Model weights saved to checkpoints/lwenet_epoch_48.pkl
+Current learning rate: 0.01
+Train Epoch: 49 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.158770
+Train Epoch: 49 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.402752
+Train Epoch: 49 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.217563
+Train Epoch: 49 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.339157
+Train Epoch: 49 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.307360
+train Epoch: 49	avgLoss: 0.309621
+Valid set: Average loss: 0.4382, Accuracy: 1558.0/2000 (77.900000%)
+
+Test set: Average loss: 0.4220, Accuracy: 7984.0/10000 (79.840000%)
+
+Epoch 49: Model weights saved to checkpoints/lwenet_epoch_49.pkl
+Current learning rate: 0.01
+Train Epoch: 50 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.261219
+Train Epoch: 50 [1600/4000 (40%)]	train_accuracy: 1.000000	Loss: 0.109368
+Train Epoch: 50 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.399486
+Train Epoch: 50 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.286608
+Train Epoch: 50 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.206580
+train Epoch: 50	avgLoss: 0.337013
+Valid set: Average loss: 0.8196, Accuracy: 1378.0/2000 (68.900000%)
+
+Test set: Average loss: 0.7963, Accuracy: 6953.0/10000 (69.530000%)
+
+Epoch 50: Model weights saved to checkpoints/lwenet_epoch_50.pkl
+Current learning rate: 0.01
+Train Epoch: 51 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.392427
+Train Epoch: 51 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.282536
+Train Epoch: 51 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.291771
+Train Epoch: 51 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.210507
+Train Epoch: 51 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.216577
+train Epoch: 51	avgLoss: 0.306053
+Valid set: Average loss: 0.4874, Accuracy: 1598.0/2000 (79.900000%)
+
+Test set: Average loss: 0.4928, Accuracy: 8035.0/10000 (80.350000%)
+
+Epoch 51: Model weights saved to checkpoints/lwenet_epoch_51.pkl
+Current learning rate: 0.01
+Train Epoch: 52 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.271254
+Train Epoch: 52 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.427671
+Train Epoch: 52 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.145307
+Train Epoch: 52 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.249517
+Train Epoch: 52 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.299439
+train Epoch: 52	avgLoss: 0.286659
+Valid set: Average loss: 0.3082, Accuracy: 1680.0/2000 (84.000000%)
+
+Test set: Average loss: 0.3104, Accuracy: 8398.0/10000 (83.980000%)
+
+Epoch 52: Model weights saved to checkpoints/lwenet_epoch_52.pkl
+Current learning rate: 0.01
+Train Epoch: 53 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.488656
+Train Epoch: 53 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.222588
+Train Epoch: 53 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.257202
+Train Epoch: 53 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.314126
+Train Epoch: 53 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.278794
+train Epoch: 53	avgLoss: 0.295732
+Valid set: Average loss: 0.5313, Accuracy: 1586.0/2000 (79.300000%)
+
+Test set: Average loss: 0.5310, Accuracy: 7943.0/10000 (79.430000%)
+
+Epoch 53: Model weights saved to checkpoints/lwenet_epoch_53.pkl
+Current learning rate: 0.01
+Train Epoch: 54 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.319394
+Train Epoch: 54 [1600/4000 (40%)]	train_accuracy: 0.750000	Loss: 0.364805
+Train Epoch: 54 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.367950
+Train Epoch: 54 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.402484
+Train Epoch: 54 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.303843
+train Epoch: 54	avgLoss: 0.324522
+Valid set: Average loss: 0.3503, Accuracy: 1649.0/2000 (82.450000%)
+
+Test set: Average loss: 0.3437, Accuracy: 8288.0/10000 (82.880000%)
+
+Epoch 54: Model weights saved to checkpoints/lwenet_epoch_54.pkl
+Current learning rate: 0.01
+Train Epoch: 55 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.260683
+Train Epoch: 55 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.210253
+Train Epoch: 55 [2400/4000 (60%)]	train_accuracy: 0.718750	Loss: 0.445608
+Train Epoch: 55 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.164602
+Train Epoch: 55 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.303774
+train Epoch: 55	avgLoss: 0.304302
+Valid set: Average loss: 0.6764, Accuracy: 1425.0/2000 (71.250000%)
+
+Test set: Average loss: 0.6519, Accuracy: 7230.0/10000 (72.300000%)
+
+Epoch 55: Model weights saved to checkpoints/lwenet_epoch_55.pkl
+Current learning rate: 0.01
+Train Epoch: 56 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.315885
+Train Epoch: 56 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.320628
+Train Epoch: 56 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.562014
+Train Epoch: 56 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.152769
+Train Epoch: 56 [4000/4000 (100%)]	train_accuracy: 0.750000	Loss: 0.594297
+train Epoch: 56	avgLoss: 0.295258
+Valid set: Average loss: 0.8201, Accuracy: 1422.0/2000 (71.100000%)
+
+Test set: Average loss: 0.8013, Accuracy: 7161.0/10000 (71.610000%)
+
+Epoch 56: Model weights saved to checkpoints/lwenet_epoch_56.pkl
+Current learning rate: 0.01
+Train Epoch: 57 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.574562
+Train Epoch: 57 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.379202
+Train Epoch: 57 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.126416
+Train Epoch: 57 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.649151
+Train Epoch: 57 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.255804
+train Epoch: 57	avgLoss: 0.369992
+Valid set: Average loss: 0.3763, Accuracy: 1657.0/2000 (82.850000%)
+
+Test set: Average loss: 0.3865, Accuracy: 8334.0/10000 (83.340000%)
+
+Epoch 57: Model weights saved to checkpoints/lwenet_epoch_57.pkl
+Current learning rate: 0.01
+Train Epoch: 58 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.169232
+Train Epoch: 58 [1600/4000 (40%)]	train_accuracy: 0.781250	Loss: 0.499336
+Train Epoch: 58 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.454283
+Train Epoch: 58 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.382471
+Train Epoch: 58 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.204765
+train Epoch: 58	avgLoss: 0.317671
+Valid set: Average loss: 1.1822, Accuracy: 1348.0/2000 (67.400000%)
+
+Test set: Average loss: 1.1504, Accuracy: 6780.0/10000 (67.800000%)
+
+Epoch 58: Model weights saved to checkpoints/lwenet_epoch_58.pkl
+Current learning rate: 0.01
+Train Epoch: 59 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.233126
+Train Epoch: 59 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.228448
+Train Epoch: 59 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.217056
+Train Epoch: 59 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.118254
+Train Epoch: 59 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.282188
+train Epoch: 59	avgLoss: 0.296380
+Valid set: Average loss: 0.7800, Accuracy: 1516.0/2000 (75.800000%)
+
+Test set: Average loss: 0.7226, Accuracy: 7697.0/10000 (76.970000%)
+
+Epoch 59: Model weights saved to checkpoints/lwenet_epoch_59.pkl
+Current learning rate: 0.01
+Train Epoch: 60 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.280648
+Train Epoch: 60 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.248391
+Train Epoch: 60 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.231443
+Train Epoch: 60 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.224441
+Train Epoch: 60 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.509062
+train Epoch: 60	avgLoss: 0.309683
+Valid set: Average loss: 0.4120, Accuracy: 1614.0/2000 (80.700000%)
+
+Test set: Average loss: 0.4042, Accuracy: 8178.0/10000 (81.780000%)
+
+Epoch 60: Model weights saved to checkpoints/lwenet_epoch_60.pkl
+Current learning rate: 0.01
+Train Epoch: 61 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.435918
+Train Epoch: 61 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.204873
+Train Epoch: 61 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.304923
+Train Epoch: 61 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.162737
+Train Epoch: 61 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.230656
+train Epoch: 61	avgLoss: 0.296360
+Valid set: Average loss: 0.6111, Accuracy: 1557.0/2000 (77.850000%)
+
+Test set: Average loss: 0.5930, Accuracy: 7844.0/10000 (78.440000%)
+
+Epoch 61: Model weights saved to checkpoints/lwenet_epoch_61.pkl
+Current learning rate: 0.01
+Train Epoch: 62 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.305696
+Train Epoch: 62 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.168790
+Train Epoch: 62 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.649296
+Train Epoch: 62 [3200/4000 (80%)]	train_accuracy: 0.718750	Loss: 0.570478
+Train Epoch: 62 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.323177
+train Epoch: 62	avgLoss: 0.289449
+Valid set: Average loss: 0.3818, Accuracy: 1620.0/2000 (81.000000%)
+
+Test set: Average loss: 0.3675, Accuracy: 8232.0/10000 (82.320000%)
+
+Epoch 62: Model weights saved to checkpoints/lwenet_epoch_62.pkl
+Current learning rate: 0.01
+Train Epoch: 63 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.255721
+Train Epoch: 63 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.468903
+Train Epoch: 63 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.165988
+Train Epoch: 63 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.351313
+Train Epoch: 63 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.394388
+train Epoch: 63	avgLoss: 0.290527
+Valid set: Average loss: 0.6934, Accuracy: 1458.0/2000 (72.900000%)
+
+Test set: Average loss: 0.6810, Accuracy: 7370.0/10000 (73.700000%)
+
+Epoch 63: Model weights saved to checkpoints/lwenet_epoch_63.pkl
+Current learning rate: 0.01
+Train Epoch: 64 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.431864
+Train Epoch: 64 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.161636
+Train Epoch: 64 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.173002
+Train Epoch: 64 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.218571
+Train Epoch: 64 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.281172
+train Epoch: 64	avgLoss: 0.272487
+Valid set: Average loss: 0.5749, Accuracy: 1539.0/2000 (76.950000%)
+
+Test set: Average loss: 0.5527, Accuracy: 7757.0/10000 (77.570000%)
+
+Epoch 64: Model weights saved to checkpoints/lwenet_epoch_64.pkl
+Current learning rate: 0.01
+Train Epoch: 65 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.506511
+Train Epoch: 65 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.228204
+Train Epoch: 65 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.295830
+Train Epoch: 65 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.154285
+Train Epoch: 65 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.257987
+train Epoch: 65	avgLoss: 0.300475
+Valid set: Average loss: 0.3784, Accuracy: 1635.0/2000 (81.750000%)
+
+Test set: Average loss: 0.3826, Accuracy: 8209.0/10000 (82.090000%)
+
+Epoch 65: Model weights saved to checkpoints/lwenet_epoch_65.pkl
+Current learning rate: 0.01
+Train Epoch: 66 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.222753
+Train Epoch: 66 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.228038
+Train Epoch: 66 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.336716
+Train Epoch: 66 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.230133
+Train Epoch: 66 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.236643
+train Epoch: 66	avgLoss: 0.278709
+Valid set: Average loss: 0.6909, Accuracy: 1437.0/2000 (71.850000%)
+
+Test set: Average loss: 0.7012, Accuracy: 7154.0/10000 (71.540000%)
+
+Epoch 66: Model weights saved to checkpoints/lwenet_epoch_66.pkl
+Current learning rate: 0.01
+Train Epoch: 67 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.202608
+Train Epoch: 67 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.276556
+Train Epoch: 67 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.373994
+Train Epoch: 67 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.212002
+Train Epoch: 67 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.539209
+train Epoch: 67	avgLoss: 0.314329
+Valid set: Average loss: 0.8583, Accuracy: 1436.0/2000 (71.800000%)
+
+Test set: Average loss: 0.9101, Accuracy: 7167.0/10000 (71.670000%)
+
+Epoch 67: Model weights saved to checkpoints/lwenet_epoch_67.pkl
+Current learning rate: 0.01
+Train Epoch: 68 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.333807
+Train Epoch: 68 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.335899
+Train Epoch: 68 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.123639
+Train Epoch: 68 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.153567
+Train Epoch: 68 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.167785
+train Epoch: 68	avgLoss: 0.279068
+Valid set: Average loss: 0.2988, Accuracy: 1688.0/2000 (84.400000%)
+
+Test set: Average loss: 0.2856, Accuracy: 8496.0/10000 (84.960000%)
+
+Epoch 68: Model weights saved to checkpoints/lwenet_epoch_68.pkl
+Current learning rate: 0.01
+Train Epoch: 69 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.275803
+Train Epoch: 69 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.336950
+Train Epoch: 69 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.307967
+Train Epoch: 69 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.251653
+Train Epoch: 69 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.170928
+train Epoch: 69	avgLoss: 0.281324
+Valid set: Average loss: 0.7487, Accuracy: 1465.0/2000 (73.250000%)
+
+Test set: Average loss: 0.6651, Accuracy: 7470.0/10000 (74.700000%)
+
+Epoch 69: Model weights saved to checkpoints/lwenet_epoch_69.pkl
+Current learning rate: 0.01
+Train Epoch: 70 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.229670
+Train Epoch: 70 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.296451
+Train Epoch: 70 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.191900
+Train Epoch: 70 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.254333
+Train Epoch: 70 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.159486
+train Epoch: 70	avgLoss: 0.278172
+Valid set: Average loss: 0.9402, Accuracy: 1430.0/2000 (71.500000%)
+
+Test set: Average loss: 0.8798, Accuracy: 7389.0/10000 (73.890000%)
+
+Epoch 70: Model weights saved to checkpoints/lwenet_epoch_70.pkl
+Current learning rate: 0.01
+Train Epoch: 71 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.158625
+Train Epoch: 71 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.202368
+Train Epoch: 71 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.301066
+Train Epoch: 71 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.799131
+Train Epoch: 71 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.375054
+train Epoch: 71	avgLoss: 0.303028
+Valid set: Average loss: 0.6196, Accuracy: 1554.0/2000 (77.700000%)
+
+Test set: Average loss: 0.5977, Accuracy: 7833.0/10000 (78.330000%)
+
+Epoch 71: Model weights saved to checkpoints/lwenet_epoch_71.pkl
+Current learning rate: 0.01
+Train Epoch: 72 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.176833
+Train Epoch: 72 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.448635
+Train Epoch: 72 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.263125
+Train Epoch: 72 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.366099
+Train Epoch: 72 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.232225
+train Epoch: 72	avgLoss: 0.282800
+Valid set: Average loss: 0.6643, Accuracy: 1559.0/2000 (77.950000%)
+
+Test set: Average loss: 0.6564, Accuracy: 7774.0/10000 (77.740000%)
+
+Epoch 72: Model weights saved to checkpoints/lwenet_epoch_72.pkl
+Current learning rate: 0.01
+Train Epoch: 73 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.144507
+Train Epoch: 73 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.327888
+Train Epoch: 73 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.372857
+Train Epoch: 73 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.304553
+Train Epoch: 73 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.192784
+train Epoch: 73	avgLoss: 0.264693
+Valid set: Average loss: 0.3775, Accuracy: 1641.0/2000 (82.050000%)
+
+Test set: Average loss: 0.3782, Accuracy: 8224.0/10000 (82.240000%)
+
+Epoch 73: Model weights saved to checkpoints/lwenet_epoch_73.pkl
+Current learning rate: 0.01
+Train Epoch: 74 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.201415
+Train Epoch: 74 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.190394
+Train Epoch: 74 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.412623
+Train Epoch: 74 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.448248
+Train Epoch: 74 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.510894
+train Epoch: 74	avgLoss: 0.303529
+Valid set: Average loss: 2.1192, Accuracy: 1207.0/2000 (60.350000%)
+
+Test set: Average loss: 2.1700, Accuracy: 6006.0/10000 (60.060000%)
+
+Epoch 74: Model weights saved to checkpoints/lwenet_epoch_74.pkl
+Current learning rate: 0.01
+Train Epoch: 75 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.247808
+Train Epoch: 75 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.175365
+Train Epoch: 75 [2400/4000 (60%)]	train_accuracy: 0.750000	Loss: 0.544415
+Train Epoch: 75 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.360313
+Train Epoch: 75 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.395248
+train Epoch: 75	avgLoss: 0.275477
+Valid set: Average loss: 0.3785, Accuracy: 1661.0/2000 (83.050000%)
+
+Test set: Average loss: 0.3733, Accuracy: 8347.0/10000 (83.470000%)
+
+Epoch 75: Model weights saved to checkpoints/lwenet_epoch_75.pkl
+Current learning rate: 0.01
+Train Epoch: 76 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.498917
+Train Epoch: 76 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.230704
+Train Epoch: 76 [2400/4000 (60%)]	train_accuracy: 0.781250	Loss: 0.646086
+Train Epoch: 76 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.139788
+Train Epoch: 76 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.217309
+train Epoch: 76	avgLoss: 0.266307
+Valid set: Average loss: 0.5602, Accuracy: 1494.0/2000 (74.700000%)
+
+Test set: Average loss: 0.5681, Accuracy: 7480.0/10000 (74.800000%)
+
+Epoch 76: Model weights saved to checkpoints/lwenet_epoch_76.pkl
+Current learning rate: 0.01
+Train Epoch: 77 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.396118
+Train Epoch: 77 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.255900
+Train Epoch: 77 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.300954
+Train Epoch: 77 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.224047
+Train Epoch: 77 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.312025
+train Epoch: 77	avgLoss: 0.252720
+Valid set: Average loss: 0.2982, Accuracy: 1702.0/2000 (85.100000%)
+
+Test set: Average loss: 0.3051, Accuracy: 8532.0/10000 (85.320000%)
+
+Epoch 77: Model weights saved to checkpoints/lwenet_epoch_77.pkl
+Current learning rate: 0.01
+Train Epoch: 78 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.293232
+Train Epoch: 78 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.352275
+Train Epoch: 78 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.171141
+Train Epoch: 78 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.142062
+Train Epoch: 78 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.347159
+train Epoch: 78	avgLoss: 0.254842
+Valid set: Average loss: 0.7099, Accuracy: 1526.0/2000 (76.300000%)
+
+Test set: Average loss: 0.7319, Accuracy: 7632.0/10000 (76.320000%)
+
+Epoch 78: Model weights saved to checkpoints/lwenet_epoch_78.pkl
+Current learning rate: 0.01
+Train Epoch: 79 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.525897
+Train Epoch: 79 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.156948
+Train Epoch: 79 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.172762
+Train Epoch: 79 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.207229
+Train Epoch: 79 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.286731
+train Epoch: 79	avgLoss: 0.257195
+Valid set: Average loss: 0.3505, Accuracy: 1677.0/2000 (83.850000%)
+
+Test set: Average loss: 0.3387, Accuracy: 8413.0/10000 (84.130000%)
+
+Epoch 79: Model weights saved to checkpoints/lwenet_epoch_79.pkl
+Current learning rate: 0.01
+Train Epoch: 80 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.172439
+Train Epoch: 80 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.183180
+Train Epoch: 80 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.210702
+Train Epoch: 80 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.512654
+Train Epoch: 80 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.331508
+train Epoch: 80	avgLoss: 0.279217
+Valid set: Average loss: 0.3999, Accuracy: 1616.0/2000 (80.800000%)
+
+Test set: Average loss: 0.3667, Accuracy: 8190.0/10000 (81.900000%)
+
+Epoch 80: Model weights saved to checkpoints/lwenet_epoch_80.pkl
+Current learning rate: 0.001
+Train Epoch: 81 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.153041
+Train Epoch: 81 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.196269
+Train Epoch: 81 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.179949
+Train Epoch: 81 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.224445
+Train Epoch: 81 [4000/4000 (100%)]	train_accuracy: 0.781250	Loss: 0.436230
+train Epoch: 81	avgLoss: 0.206248
+Valid set: Average loss: 0.2522, Accuracy: 1744.0/2000 (87.200000%)
+
+Test set: Average loss: 0.2439, Accuracy: 8720.0/10000 (87.200000%)
+
+Epoch 81: Model weights saved to checkpoints/lwenet_epoch_81.pkl
+Current learning rate: 0.001
+Train Epoch: 82 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.126700
+Train Epoch: 82 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.093173
+Train Epoch: 82 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.200587
+Train Epoch: 82 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.110065
+Train Epoch: 82 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.082839
+train Epoch: 82	avgLoss: 0.197495
+Valid set: Average loss: 0.2370, Accuracy: 1752.0/2000 (87.600000%)
+
+Test set: Average loss: 0.2350, Accuracy: 8778.0/10000 (87.780000%)
+
+Epoch 82: Model weights saved to checkpoints/lwenet_epoch_82.pkl
+Current learning rate: 0.001
+Train Epoch: 83 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.169120
+Train Epoch: 83 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.306155
+Train Epoch: 83 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.225650
+Train Epoch: 83 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.139508
+Train Epoch: 83 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.148528
+train Epoch: 83	avgLoss: 0.190466
+Valid set: Average loss: 0.2382, Accuracy: 1756.0/2000 (87.800000%)
+
+Test set: Average loss: 0.2366, Accuracy: 8757.0/10000 (87.570000%)
+
+Epoch 83: Model weights saved to checkpoints/lwenet_epoch_83.pkl
+Current learning rate: 0.001
+Train Epoch: 84 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.155980
+Train Epoch: 84 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.134815
+Train Epoch: 84 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.159031
+Train Epoch: 84 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.274293
+Train Epoch: 84 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.278394
+train Epoch: 84	avgLoss: 0.188015
+Valid set: Average loss: 0.2379, Accuracy: 1757.0/2000 (87.850000%)
+
+Test set: Average loss: 0.2339, Accuracy: 8786.0/10000 (87.860000%)
+
+Epoch 84: Model weights saved to checkpoints/lwenet_epoch_84.pkl
+Current learning rate: 0.001
+Train Epoch: 85 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.164263
+Train Epoch: 85 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.161128
+Train Epoch: 85 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.093186
+Train Epoch: 85 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.150700
+Train Epoch: 85 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.134094
+train Epoch: 85	avgLoss: 0.180050
+Valid set: Average loss: 0.2508, Accuracy: 1742.0/2000 (87.100000%)
+
+Test set: Average loss: 0.2569, Accuracy: 8702.0/10000 (87.020000%)
+
+Epoch 85: Model weights saved to checkpoints/lwenet_epoch_85.pkl
+Current learning rate: 0.001
+Train Epoch: 86 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.109611
+Train Epoch: 86 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.227513
+Train Epoch: 86 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.320063
+Train Epoch: 86 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.271120
+Train Epoch: 86 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.178735
+train Epoch: 86	avgLoss: 0.182875
+Valid set: Average loss: 0.2312, Accuracy: 1771.0/2000 (88.550000%)
+
+Test set: Average loss: 0.2302, Accuracy: 8813.0/10000 (88.130000%)
+
+Epoch 86: Model weights saved to checkpoints/lwenet_epoch_86.pkl
+Current learning rate: 0.001
+Train Epoch: 87 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.371396
+Train Epoch: 87 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.216688
+Train Epoch: 87 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.286377
+Train Epoch: 87 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.101862
+Train Epoch: 87 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.101554
+train Epoch: 87	avgLoss: 0.181090
+Valid set: Average loss: 0.2538, Accuracy: 1747.0/2000 (87.350000%)
+
+Test set: Average loss: 0.2448, Accuracy: 8754.0/10000 (87.540000%)
+
+Epoch 87: Model weights saved to checkpoints/lwenet_epoch_87.pkl
+Current learning rate: 0.001
+Train Epoch: 88 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.246000
+Train Epoch: 88 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.123832
+Train Epoch: 88 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.125167
+Train Epoch: 88 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.102657
+Train Epoch: 88 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.216080
+train Epoch: 88	avgLoss: 0.182856
+Valid set: Average loss: 0.2309, Accuracy: 1768.0/2000 (88.400000%)
+
+Test set: Average loss: 0.2297, Accuracy: 8789.0/10000 (87.890000%)
+
+Epoch 88: Model weights saved to checkpoints/lwenet_epoch_88.pkl
+Current learning rate: 0.001
+Train Epoch: 89 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.271084
+Train Epoch: 89 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.128145
+Train Epoch: 89 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.118923
+Train Epoch: 89 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.092035
+Train Epoch: 89 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.202437
+train Epoch: 89	avgLoss: 0.179346
+Valid set: Average loss: 0.2370, Accuracy: 1743.0/2000 (87.150000%)
+
+Test set: Average loss: 0.2431, Accuracy: 8773.0/10000 (87.730000%)
+
+Epoch 89: Model weights saved to checkpoints/lwenet_epoch_89.pkl
+Current learning rate: 0.001
+Train Epoch: 90 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.103793
+Train Epoch: 90 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.284575
+Train Epoch: 90 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.263496
+Train Epoch: 90 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.123795
+Train Epoch: 90 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.158142
+train Epoch: 90	avgLoss: 0.179151
+Valid set: Average loss: 0.2323, Accuracy: 1761.0/2000 (88.050000%)
+
+Test set: Average loss: 0.2314, Accuracy: 8811.0/10000 (88.110000%)
+
+Epoch 90: Model weights saved to checkpoints/lwenet_epoch_90.pkl
+Current learning rate: 0.001
+Train Epoch: 91 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.223617
+Train Epoch: 91 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.095634
+Train Epoch: 91 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.056477
+Train Epoch: 91 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.082298
+Train Epoch: 91 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.098791
+train Epoch: 91	avgLoss: 0.178694
+Valid set: Average loss: 0.2386, Accuracy: 1761.0/2000 (88.050000%)
+
+Test set: Average loss: 0.2346, Accuracy: 8782.0/10000 (87.820000%)
+
+Epoch 91: Model weights saved to checkpoints/lwenet_epoch_91.pkl
+Current learning rate: 0.001
+Train Epoch: 92 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.120600
+Train Epoch: 92 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.212844
+Train Epoch: 92 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.169202
+Train Epoch: 92 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.239261
+Train Epoch: 92 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.127129
+train Epoch: 92	avgLoss: 0.180422
+Valid set: Average loss: 0.2351, Accuracy: 1760.0/2000 (88.000000%)
+
+Test set: Average loss: 0.2299, Accuracy: 8824.0/10000 (88.240000%)
+
+Epoch 92: Model weights saved to checkpoints/lwenet_epoch_92.pkl
+Current learning rate: 0.001
+Train Epoch: 93 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.168051
+Train Epoch: 93 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.223593
+Train Epoch: 93 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.128614
+Train Epoch: 93 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.253336
+Train Epoch: 93 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.204462
+train Epoch: 93	avgLoss: 0.177435
+Valid set: Average loss: 0.2298, Accuracy: 1763.0/2000 (88.150000%)
+
+Test set: Average loss: 0.2290, Accuracy: 8822.0/10000 (88.220000%)
+
+Epoch 93: Model weights saved to checkpoints/lwenet_epoch_93.pkl
+Current learning rate: 0.001
+Train Epoch: 94 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.080862
+Train Epoch: 94 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.083443
+Train Epoch: 94 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.045292
+Train Epoch: 94 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.141752
+Train Epoch: 94 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.187419
+train Epoch: 94	avgLoss: 0.174472
+Valid set: Average loss: 0.2317, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2304, Accuracy: 8804.0/10000 (88.040000%)
+
+Epoch 94: Model weights saved to checkpoints/lwenet_epoch_94.pkl
+Current learning rate: 0.001
+Train Epoch: 95 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.084505
+Train Epoch: 95 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.110322
+Train Epoch: 95 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.214960
+Train Epoch: 95 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.129427
+Train Epoch: 95 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.200293
+train Epoch: 95	avgLoss: 0.176473
+Valid set: Average loss: 0.2489, Accuracy: 1756.0/2000 (87.800000%)
+
+Test set: Average loss: 0.2389, Accuracy: 8796.0/10000 (87.960000%)
+
+Epoch 95: Model weights saved to checkpoints/lwenet_epoch_95.pkl
+Current learning rate: 0.001
+Train Epoch: 96 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.163206
+Train Epoch: 96 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.212511
+Train Epoch: 96 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.192673
+Train Epoch: 96 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.279715
+Train Epoch: 96 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.087831
+train Epoch: 96	avgLoss: 0.175593
+Valid set: Average loss: 0.2564, Accuracy: 1737.0/2000 (86.850000%)
+
+Test set: Average loss: 0.2500, Accuracy: 8734.0/10000 (87.340000%)
+
+Epoch 96: Model weights saved to checkpoints/lwenet_epoch_96.pkl
+Current learning rate: 0.001
+Train Epoch: 97 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.142221
+Train Epoch: 97 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.121420
+Train Epoch: 97 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.164227
+Train Epoch: 97 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.222593
+Train Epoch: 97 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.233871
+train Epoch: 97	avgLoss: 0.173499
+Valid set: Average loss: 0.2703, Accuracy: 1736.0/2000 (86.800000%)
+
+Test set: Average loss: 0.2689, Accuracy: 8707.0/10000 (87.070000%)
+
+Epoch 97: Model weights saved to checkpoints/lwenet_epoch_97.pkl
+Current learning rate: 0.001
+Train Epoch: 98 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.191556
+Train Epoch: 98 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.180111
+Train Epoch: 98 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.079463
+Train Epoch: 98 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.136523
+Train Epoch: 98 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.140831
+train Epoch: 98	avgLoss: 0.172716
+Valid set: Average loss: 0.2308, Accuracy: 1761.0/2000 (88.050000%)
+
+Test set: Average loss: 0.2352, Accuracy: 8812.0/10000 (88.120000%)
+
+Epoch 98: Model weights saved to checkpoints/lwenet_epoch_98.pkl
+Current learning rate: 0.001
+Train Epoch: 99 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.181335
+Train Epoch: 99 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.173316
+Train Epoch: 99 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.121413
+Train Epoch: 99 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.057578
+Train Epoch: 99 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.380091
+train Epoch: 99	avgLoss: 0.173013
+Valid set: Average loss: 0.2727, Accuracy: 1736.0/2000 (86.800000%)
+
+Test set: Average loss: 0.2622, Accuracy: 8733.0/10000 (87.330000%)
+
+Epoch 99: Model weights saved to checkpoints/lwenet_epoch_99.pkl
+Current learning rate: 0.001
+Train Epoch: 100 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.123164
+Train Epoch: 100 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.213068
+Train Epoch: 100 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.158539
+Train Epoch: 100 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.129185
+Train Epoch: 100 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.098272
+train Epoch: 100	avgLoss: 0.172453
+Valid set: Average loss: 0.2494, Accuracy: 1742.0/2000 (87.100000%)
+
+Test set: Average loss: 0.2391, Accuracy: 8806.0/10000 (88.060000%)
+
+Epoch 100: Model weights saved to checkpoints/lwenet_epoch_100.pkl
+Current learning rate: 0.001
+Train Epoch: 101 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.091949
+Train Epoch: 101 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.095441
+Train Epoch: 101 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.172615
+Train Epoch: 101 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.124666
+Train Epoch: 101 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.147156
+train Epoch: 101	avgLoss: 0.169214
+Valid set: Average loss: 0.2358, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2302, Accuracy: 8846.0/10000 (88.460000%)
+
+Epoch 101: Model weights saved to checkpoints/lwenet_epoch_101.pkl
+Current learning rate: 0.001
+Train Epoch: 102 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.133808
+Train Epoch: 102 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.189882
+Train Epoch: 102 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.145859
+Train Epoch: 102 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.058000
+Train Epoch: 102 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.131819
+train Epoch: 102	avgLoss: 0.166930
+Valid set: Average loss: 0.2448, Accuracy: 1747.0/2000 (87.350000%)
+
+Test set: Average loss: 0.2424, Accuracy: 8823.0/10000 (88.230000%)
+
+Epoch 102: Model weights saved to checkpoints/lwenet_epoch_102.pkl
+Current learning rate: 0.001
+Train Epoch: 103 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.162145
+Train Epoch: 103 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.109734
+Train Epoch: 103 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.094646
+Train Epoch: 103 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.107124
+Train Epoch: 103 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.184682
+train Epoch: 103	avgLoss: 0.166134
+Valid set: Average loss: 0.2330, Accuracy: 1763.0/2000 (88.150000%)
+
+Test set: Average loss: 0.2283, Accuracy: 8832.0/10000 (88.320000%)
+
+Epoch 103: Model weights saved to checkpoints/lwenet_epoch_103.pkl
+Current learning rate: 0.001
+Train Epoch: 104 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.157092
+Train Epoch: 104 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.072848
+Train Epoch: 104 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.103827
+Train Epoch: 104 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.082559
+Train Epoch: 104 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.121745
+train Epoch: 104	avgLoss: 0.168957
+Valid set: Average loss: 0.2455, Accuracy: 1747.0/2000 (87.350000%)
+
+Test set: Average loss: 0.2447, Accuracy: 8793.0/10000 (87.930000%)
+
+Epoch 104: Model weights saved to checkpoints/lwenet_epoch_104.pkl
+Current learning rate: 0.001
+Train Epoch: 105 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.309942
+Train Epoch: 105 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.410836
+Train Epoch: 105 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.119637
+Train Epoch: 105 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.142023
+Train Epoch: 105 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.220409
+train Epoch: 105	avgLoss: 0.168863
+Valid set: Average loss: 0.2351, Accuracy: 1757.0/2000 (87.850000%)
+
+Test set: Average loss: 0.2329, Accuracy: 8821.0/10000 (88.210000%)
+
+Epoch 105: Model weights saved to checkpoints/lwenet_epoch_105.pkl
+Current learning rate: 0.001
+Train Epoch: 106 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.286598
+Train Epoch: 106 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.127310
+Train Epoch: 106 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.155641
+Train Epoch: 106 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.211121
+Train Epoch: 106 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.136096
+train Epoch: 106	avgLoss: 0.170102
+Valid set: Average loss: 0.2520, Accuracy: 1741.0/2000 (87.050000%)
+
+Test set: Average loss: 0.2443, Accuracy: 8767.0/10000 (87.670000%)
+
+Epoch 106: Model weights saved to checkpoints/lwenet_epoch_106.pkl
+Current learning rate: 0.001
+Train Epoch: 107 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.098306
+Train Epoch: 107 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.176459
+Train Epoch: 107 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.163151
+Train Epoch: 107 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.204367
+Train Epoch: 107 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.099487
+train Epoch: 107	avgLoss: 0.163633
+Valid set: Average loss: 0.2787, Accuracy: 1737.0/2000 (86.850000%)
+
+Test set: Average loss: 0.2949, Accuracy: 8664.0/10000 (86.640000%)
+
+Epoch 107: Model weights saved to checkpoints/lwenet_epoch_107.pkl
+Current learning rate: 0.001
+Train Epoch: 108 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.232595
+Train Epoch: 108 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.103880
+Train Epoch: 108 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.056854
+Train Epoch: 108 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.165604
+Train Epoch: 108 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.070128
+train Epoch: 108	avgLoss: 0.170382
+Valid set: Average loss: 0.2604, Accuracy: 1746.0/2000 (87.300000%)
+
+Test set: Average loss: 0.2497, Accuracy: 8781.0/10000 (87.810000%)
+
+Epoch 108: Model weights saved to checkpoints/lwenet_epoch_108.pkl
+Current learning rate: 0.001
+Train Epoch: 109 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.180988
+Train Epoch: 109 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.116642
+Train Epoch: 109 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.220666
+Train Epoch: 109 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.223807
+Train Epoch: 109 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.147623
+train Epoch: 109	avgLoss: 0.164352
+Valid set: Average loss: 0.2513, Accuracy: 1750.0/2000 (87.500000%)
+
+Test set: Average loss: 0.2437, Accuracy: 8802.0/10000 (88.020000%)
+
+Epoch 109: Model weights saved to checkpoints/lwenet_epoch_109.pkl
+Current learning rate: 0.001
+Train Epoch: 110 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.095383
+Train Epoch: 110 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.172252
+Train Epoch: 110 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.172765
+Train Epoch: 110 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.264336
+Train Epoch: 110 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.048322
+train Epoch: 110	avgLoss: 0.163358
+Valid set: Average loss: 0.2603, Accuracy: 1753.0/2000 (87.650000%)
+
+Test set: Average loss: 0.2558, Accuracy: 8777.0/10000 (87.770000%)
+
+Epoch 110: Model weights saved to checkpoints/lwenet_epoch_110.pkl
+Current learning rate: 0.001
+Train Epoch: 111 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.160974
+Train Epoch: 111 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.151695
+Train Epoch: 111 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.181349
+Train Epoch: 111 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.181489
+Train Epoch: 111 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.106883
+train Epoch: 111	avgLoss: 0.167625
+Valid set: Average loss: 0.2576, Accuracy: 1753.0/2000 (87.650000%)
+
+Test set: Average loss: 0.2648, Accuracy: 8724.0/10000 (87.240000%)
+
+Epoch 111: Model weights saved to checkpoints/lwenet_epoch_111.pkl
+Current learning rate: 0.001
+Train Epoch: 112 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.123538
+Train Epoch: 112 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.140337
+Train Epoch: 112 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.176947
+Train Epoch: 112 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.183402
+Train Epoch: 112 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.177238
+train Epoch: 112	avgLoss: 0.163162
+Valid set: Average loss: 0.2806, Accuracy: 1730.0/2000 (86.500000%)
+
+Test set: Average loss: 0.2652, Accuracy: 8714.0/10000 (87.140000%)
+
+Epoch 112: Model weights saved to checkpoints/lwenet_epoch_112.pkl
+Current learning rate: 0.001
+Train Epoch: 113 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.125396
+Train Epoch: 113 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.293032
+Train Epoch: 113 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.147211
+Train Epoch: 113 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.158231
+Train Epoch: 113 [4000/4000 (100%)]	train_accuracy: 0.812500	Loss: 0.221564
+train Epoch: 113	avgLoss: 0.167473
+Valid set: Average loss: 0.2490, Accuracy: 1750.0/2000 (87.500000%)
+
+Test set: Average loss: 0.2392, Accuracy: 8814.0/10000 (88.140000%)
+
+Epoch 113: Model weights saved to checkpoints/lwenet_epoch_113.pkl
+Current learning rate: 0.001
+Train Epoch: 114 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.095835
+Train Epoch: 114 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.153794
+Train Epoch: 114 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.098073
+Train Epoch: 114 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.155497
+Train Epoch: 114 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.205859
+train Epoch: 114	avgLoss: 0.160650
+Valid set: Average loss: 0.2264, Accuracy: 1770.0/2000 (88.500000%)
+
+Test set: Average loss: 0.2271, Accuracy: 8852.0/10000 (88.520000%)
+
+Epoch 114: Model weights saved to checkpoints/lwenet_epoch_114.pkl
+Current learning rate: 0.001
+Train Epoch: 115 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.181967
+Train Epoch: 115 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.168289
+Train Epoch: 115 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.163423
+Train Epoch: 115 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.111409
+Train Epoch: 115 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.317909
+train Epoch: 115	avgLoss: 0.158252
+Valid set: Average loss: 0.2302, Accuracy: 1768.0/2000 (88.400000%)
+
+Test set: Average loss: 0.2317, Accuracy: 8862.0/10000 (88.620000%)
+
+Epoch 115: Model weights saved to checkpoints/lwenet_epoch_115.pkl
+Current learning rate: 0.001
+Train Epoch: 116 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.193985
+Train Epoch: 116 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.176860
+Train Epoch: 116 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.096681
+Train Epoch: 116 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.234680
+Train Epoch: 116 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.085001
+train Epoch: 116	avgLoss: 0.162550
+Valid set: Average loss: 0.2304, Accuracy: 1768.0/2000 (88.400000%)
+
+Test set: Average loss: 0.2276, Accuracy: 8862.0/10000 (88.620000%)
+
+Epoch 116: Model weights saved to checkpoints/lwenet_epoch_116.pkl
+Current learning rate: 0.001
+Train Epoch: 117 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.148411
+Train Epoch: 117 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.097783
+Train Epoch: 117 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.157747
+Train Epoch: 117 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.194784
+Train Epoch: 117 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.115547
+train Epoch: 117	avgLoss: 0.159527
+Valid set: Average loss: 0.2602, Accuracy: 1742.0/2000 (87.100000%)
+
+Test set: Average loss: 0.2487, Accuracy: 8800.0/10000 (88.000000%)
+
+Epoch 117: Model weights saved to checkpoints/lwenet_epoch_117.pkl
+Current learning rate: 0.001
+Train Epoch: 118 [800/4000 (20%)]	train_accuracy: 0.750000	Loss: 0.553599
+Train Epoch: 118 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.140662
+Train Epoch: 118 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.143880
+Train Epoch: 118 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.120986
+Train Epoch: 118 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.104547
+train Epoch: 118	avgLoss: 0.164001
+Valid set: Average loss: 0.3811, Accuracy: 1684.0/2000 (84.200000%)
+
+Test set: Average loss: 0.3718, Accuracy: 8483.0/10000 (84.830000%)
+
+Epoch 118: Model weights saved to checkpoints/lwenet_epoch_118.pkl
+Current learning rate: 0.001
+Train Epoch: 119 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.205880
+Train Epoch: 119 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.066116
+Train Epoch: 119 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.203706
+Train Epoch: 119 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.163454
+Train Epoch: 119 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.091690
+train Epoch: 119	avgLoss: 0.159840
+Valid set: Average loss: 0.2367, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2361, Accuracy: 8802.0/10000 (88.020000%)
+
+Epoch 119: Model weights saved to checkpoints/lwenet_epoch_119.pkl
+Current learning rate: 0.001
+Train Epoch: 120 [800/4000 (20%)]	train_accuracy: 1.000000	Loss: 0.085718
+Train Epoch: 120 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.165061
+Train Epoch: 120 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.235209
+Train Epoch: 120 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.246772
+Train Epoch: 120 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.115776
+train Epoch: 120	avgLoss: 0.159263
+Valid set: Average loss: 0.2485, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2436, Accuracy: 8808.0/10000 (88.080000%)
+
+Epoch 120: Model weights saved to checkpoints/lwenet_epoch_120.pkl
+Current learning rate: 0.001
+Train Epoch: 121 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.077608
+Train Epoch: 121 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.100340
+Train Epoch: 121 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.109984
+Train Epoch: 121 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.254755
+Train Epoch: 121 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.105066
+train Epoch: 121	avgLoss: 0.159859
+Valid set: Average loss: 0.3006, Accuracy: 1721.0/2000 (86.050000%)
+
+Test set: Average loss: 0.2950, Accuracy: 8683.0/10000 (86.830000%)
+
+Epoch 121: Model weights saved to checkpoints/lwenet_epoch_121.pkl
+Current learning rate: 0.001
+Train Epoch: 122 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.201007
+Train Epoch: 122 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.080182
+Train Epoch: 122 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.129798
+Train Epoch: 122 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.136997
+Train Epoch: 122 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.153404
+train Epoch: 122	avgLoss: 0.159467
+Valid set: Average loss: 0.2288, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2353, Accuracy: 8841.0/10000 (88.410000%)
+
+Epoch 122: Model weights saved to checkpoints/lwenet_epoch_122.pkl
+Current learning rate: 0.001
+Train Epoch: 123 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.163807
+Train Epoch: 123 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.136449
+Train Epoch: 123 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.090455
+Train Epoch: 123 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.100393
+Train Epoch: 123 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.190109
+train Epoch: 123	avgLoss: 0.158334
+Valid set: Average loss: 0.2420, Accuracy: 1762.0/2000 (88.100000%)
+
+Test set: Average loss: 0.2477, Accuracy: 8783.0/10000 (87.830000%)
+
+Epoch 123: Model weights saved to checkpoints/lwenet_epoch_123.pkl
+Current learning rate: 0.001
+Train Epoch: 124 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.289484
+Train Epoch: 124 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.233671
+Train Epoch: 124 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.272096
+Train Epoch: 124 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.079238
+Train Epoch: 124 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.074390
+train Epoch: 124	avgLoss: 0.163720
+Valid set: Average loss: 0.2626, Accuracy: 1746.0/2000 (87.300000%)
+
+Test set: Average loss: 0.2753, Accuracy: 8736.0/10000 (87.360000%)
+
+Epoch 124: Model weights saved to checkpoints/lwenet_epoch_124.pkl
+Current learning rate: 0.001
+Train Epoch: 125 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.209504
+Train Epoch: 125 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.119941
+Train Epoch: 125 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.095994
+Train Epoch: 125 [3200/4000 (80%)]	train_accuracy: 0.750000	Loss: 0.326798
+Train Epoch: 125 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.173504
+train Epoch: 125	avgLoss: 0.155560
+Valid set: Average loss: 0.3075, Accuracy: 1721.0/2000 (86.050000%)
+
+Test set: Average loss: 0.2960, Accuracy: 8690.0/10000 (86.900000%)
+
+Epoch 125: Model weights saved to checkpoints/lwenet_epoch_125.pkl
+Current learning rate: 0.001
+Train Epoch: 126 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.161209
+Train Epoch: 126 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.104135
+Train Epoch: 126 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.167927
+Train Epoch: 126 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.204005
+Train Epoch: 126 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.148214
+train Epoch: 126	avgLoss: 0.157464
+Valid set: Average loss: 0.2408, Accuracy: 1766.0/2000 (88.300000%)
+
+Test set: Average loss: 0.2408, Accuracy: 8829.0/10000 (88.290000%)
+
+Epoch 126: Model weights saved to checkpoints/lwenet_epoch_126.pkl
+Current learning rate: 0.001
+Train Epoch: 127 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.075868
+Train Epoch: 127 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.227378
+Train Epoch: 127 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.180729
+Train Epoch: 127 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.060467
+Train Epoch: 127 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.152934
+train Epoch: 127	avgLoss: 0.157632
+Valid set: Average loss: 0.2505, Accuracy: 1740.0/2000 (87.000000%)
+
+Test set: Average loss: 0.2495, Accuracy: 8720.0/10000 (87.200000%)
+
+Epoch 127: Model weights saved to checkpoints/lwenet_epoch_127.pkl
+Current learning rate: 0.001
+Train Epoch: 128 [800/4000 (20%)]	train_accuracy: 0.812500	Loss: 0.348634
+Train Epoch: 128 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.153653
+Train Epoch: 128 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.042679
+Train Epoch: 128 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.341220
+Train Epoch: 128 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.148834
+train Epoch: 128	avgLoss: 0.158456
+Valid set: Average loss: 0.2884, Accuracy: 1730.0/2000 (86.500000%)
+
+Test set: Average loss: 0.2775, Accuracy: 8709.0/10000 (87.090000%)
+
+Epoch 128: Model weights saved to checkpoints/lwenet_epoch_128.pkl
+Current learning rate: 0.001
+Train Epoch: 129 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.142501
+Train Epoch: 129 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.247607
+Train Epoch: 129 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.207024
+Train Epoch: 129 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.097641
+Train Epoch: 129 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.118982
+train Epoch: 129	avgLoss: 0.160156
+Valid set: Average loss: 0.2476, Accuracy: 1760.0/2000 (88.000000%)
+
+Test set: Average loss: 0.2513, Accuracy: 8781.0/10000 (87.810000%)
+
+Epoch 129: Model weights saved to checkpoints/lwenet_epoch_129.pkl
+Current learning rate: 0.001
+Train Epoch: 130 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.254951
+Train Epoch: 130 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.179377
+Train Epoch: 130 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.199828
+Train Epoch: 130 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.111643
+Train Epoch: 130 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.126067
+train Epoch: 130	avgLoss: 0.160793
+Valid set: Average loss: 0.2406, Accuracy: 1757.0/2000 (87.850000%)
+
+Test set: Average loss: 0.2502, Accuracy: 8795.0/10000 (87.950000%)
+
+Epoch 130: Model weights saved to checkpoints/lwenet_epoch_130.pkl
+Current learning rate: 0.001
+Train Epoch: 131 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.109780
+Train Epoch: 131 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.143221
+Train Epoch: 131 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.136660
+Train Epoch: 131 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.197694
+Train Epoch: 131 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.197599
+train Epoch: 131	avgLoss: 0.157515
+Valid set: Average loss: 0.2316, Accuracy: 1767.0/2000 (88.350000%)
+
+Test set: Average loss: 0.2368, Accuracy: 8819.0/10000 (88.190000%)
+
+Epoch 131: Model weights saved to checkpoints/lwenet_epoch_131.pkl
+Current learning rate: 0.001
+Train Epoch: 132 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.123471
+Train Epoch: 132 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.273918
+Train Epoch: 132 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.137188
+Train Epoch: 132 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.125343
+Train Epoch: 132 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.144459
+train Epoch: 132	avgLoss: 0.161530
+Valid set: Average loss: 0.3389, Accuracy: 1685.0/2000 (84.250000%)
+
+Test set: Average loss: 0.3325, Accuracy: 8576.0/10000 (85.760000%)
+
+Epoch 132: Model weights saved to checkpoints/lwenet_epoch_132.pkl
+Current learning rate: 0.001
+Train Epoch: 133 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.128156
+Train Epoch: 133 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.156159
+Train Epoch: 133 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.041502
+Train Epoch: 133 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.088132
+Train Epoch: 133 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.108791
+train Epoch: 133	avgLoss: 0.156417
+Valid set: Average loss: 0.2757, Accuracy: 1744.0/2000 (87.200000%)
+
+Test set: Average loss: 0.2699, Accuracy: 8747.0/10000 (87.470000%)
+
+Epoch 133: Model weights saved to checkpoints/lwenet_epoch_133.pkl
+Current learning rate: 0.001
+Train Epoch: 134 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.095901
+Train Epoch: 134 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.276998
+Train Epoch: 134 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.115016
+Train Epoch: 134 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.160853
+Train Epoch: 134 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.262634
+train Epoch: 134	avgLoss: 0.159960
+Valid set: Average loss: 0.2810, Accuracy: 1721.0/2000 (86.050000%)
+
+Test set: Average loss: 0.2729, Accuracy: 8713.0/10000 (87.130000%)
+
+Epoch 134: Model weights saved to checkpoints/lwenet_epoch_134.pkl
+Current learning rate: 0.001
+Train Epoch: 135 [800/4000 (20%)]	train_accuracy: 1.000000	Loss: 0.046448
+Train Epoch: 135 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.172910
+Train Epoch: 135 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.083384
+Train Epoch: 135 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.148015
+Train Epoch: 135 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.119170
+train Epoch: 135	avgLoss: 0.156071
+Valid set: Average loss: 0.2365, Accuracy: 1769.0/2000 (88.450000%)
+
+Test set: Average loss: 0.2339, Accuracy: 8844.0/10000 (88.440000%)
+
+Epoch 135: Model weights saved to checkpoints/lwenet_epoch_135.pkl
+Current learning rate: 0.001
+Train Epoch: 136 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.339225
+Train Epoch: 136 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.204901
+Train Epoch: 136 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.102175
+Train Epoch: 136 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.099416
+Train Epoch: 136 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.134622
+train Epoch: 136	avgLoss: 0.152852
+Valid set: Average loss: 0.3047, Accuracy: 1727.0/2000 (86.350000%)
+
+Test set: Average loss: 0.2942, Accuracy: 8708.0/10000 (87.080000%)
+
+Epoch 136: Model weights saved to checkpoints/lwenet_epoch_136.pkl
+Current learning rate: 0.001
+Train Epoch: 137 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.088464
+Train Epoch: 137 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.141064
+Train Epoch: 137 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.275354
+Train Epoch: 137 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.222825
+Train Epoch: 137 [4000/4000 (100%)]	train_accuracy: 1.000000	Loss: 0.080453
+train Epoch: 137	avgLoss: 0.155442
+Valid set: Average loss: 0.3122, Accuracy: 1723.0/2000 (86.150000%)
+
+Test set: Average loss: 0.2987, Accuracy: 8687.0/10000 (86.870000%)
+
+Epoch 137: Model weights saved to checkpoints/lwenet_epoch_137.pkl
+Current learning rate: 0.001
+Train Epoch: 138 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.152092
+Train Epoch: 138 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.167024
+Train Epoch: 138 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.074038
+Train Epoch: 138 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.149113
+Train Epoch: 138 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.221898
+train Epoch: 138	avgLoss: 0.157095
+Valid set: Average loss: 0.2402, Accuracy: 1760.0/2000 (88.000000%)
+
+Test set: Average loss: 0.2470, Accuracy: 8815.0/10000 (88.150000%)
+
+Epoch 138: Model weights saved to checkpoints/lwenet_epoch_138.pkl
+Current learning rate: 0.001
+Train Epoch: 139 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.122163
+Train Epoch: 139 [1600/4000 (40%)]	train_accuracy: 1.000000	Loss: 0.059058
+Train Epoch: 139 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.144384
+Train Epoch: 139 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.170258
+Train Epoch: 139 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.218096
+train Epoch: 139	avgLoss: 0.156481
+Valid set: Average loss: 0.2570, Accuracy: 1743.0/2000 (87.150000%)
+
+Test set: Average loss: 0.2540, Accuracy: 8811.0/10000 (88.110000%)
+
+Epoch 139: Model weights saved to checkpoints/lwenet_epoch_139.pkl
+Current learning rate: 0.001
+Train Epoch: 140 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.161755
+Train Epoch: 140 [1600/4000 (40%)]	train_accuracy: 1.000000	Loss: 0.064880
+Train Epoch: 140 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.199619
+Train Epoch: 140 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.140687
+Train Epoch: 140 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.167832
+train Epoch: 140	avgLoss: 0.152271
+Valid set: Average loss: 0.2360, Accuracy: 1757.0/2000 (87.850000%)
+
+Test set: Average loss: 0.2408, Accuracy: 8857.0/10000 (88.570000%)
+
+Epoch 140: Model weights saved to checkpoints/lwenet_epoch_140.pkl
+Current learning rate: 0.0001
+Train Epoch: 141 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.186345
+Train Epoch: 141 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.151276
+Train Epoch: 141 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.159223
+Train Epoch: 141 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.171348
+Train Epoch: 141 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.076767
+train Epoch: 141	avgLoss: 0.150736
+Valid set: Average loss: 0.2361, Accuracy: 1756.0/2000 (87.800000%)
+
+Test set: Average loss: 0.2325, Accuracy: 8857.0/10000 (88.570000%)
+
+Epoch 141: Model weights saved to checkpoints/lwenet_epoch_141.pkl
+Current learning rate: 0.0001
+Train Epoch: 142 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.173306
+Train Epoch: 142 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.087501
+Train Epoch: 142 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.166696
+Train Epoch: 142 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.146440
+Train Epoch: 142 [4000/4000 (100%)]	train_accuracy: 1.000000	Loss: 0.135008
+train Epoch: 142	avgLoss: 0.146583
+Valid set: Average loss: 0.2386, Accuracy: 1768.0/2000 (88.400000%)
+
+Test set: Average loss: 0.2385, Accuracy: 8856.0/10000 (88.560000%)
+
+Epoch 142: Model weights saved to checkpoints/lwenet_epoch_142.pkl
+Current learning rate: 0.0001
+Train Epoch: 143 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.200618
+Train Epoch: 143 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.054621
+Train Epoch: 143 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.222638
+Train Epoch: 143 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.183741
+Train Epoch: 143 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.119022
+train Epoch: 143	avgLoss: 0.142545
+Valid set: Average loss: 0.2397, Accuracy: 1767.0/2000 (88.350000%)
+
+Test set: Average loss: 0.2416, Accuracy: 8837.0/10000 (88.370000%)
+
+Epoch 143: Model weights saved to checkpoints/lwenet_epoch_143.pkl
+Current learning rate: 0.0001
+Train Epoch: 144 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.094822
+Train Epoch: 144 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.129481
+Train Epoch: 144 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.182207
+Train Epoch: 144 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.136590
+Train Epoch: 144 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.089789
+train Epoch: 144	avgLoss: 0.146318
+Valid set: Average loss: 0.2296, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2352, Accuracy: 8861.0/10000 (88.610000%)
+
+Epoch 144: Model weights saved to checkpoints/lwenet_epoch_144.pkl
+Current learning rate: 0.0001
+Train Epoch: 145 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.176963
+Train Epoch: 145 [1600/4000 (40%)]	train_accuracy: 0.812500	Loss: 0.221328
+Train Epoch: 145 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.115556
+Train Epoch: 145 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.106074
+Train Epoch: 145 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.206866
+train Epoch: 145	avgLoss: 0.142204
+Valid set: Average loss: 0.2429, Accuracy: 1753.0/2000 (87.650000%)
+
+Test set: Average loss: 0.2419, Accuracy: 8859.0/10000 (88.590000%)
+
+Epoch 145: Model weights saved to checkpoints/lwenet_epoch_145.pkl
+Current learning rate: 0.0001
+Train Epoch: 146 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.115107
+Train Epoch: 146 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.083024
+Train Epoch: 146 [2400/4000 (60%)]	train_accuracy: 0.843750	Loss: 0.224763
+Train Epoch: 146 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.207067
+Train Epoch: 146 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.180187
+train Epoch: 146	avgLoss: 0.146783
+Valid set: Average loss: 0.2332, Accuracy: 1755.0/2000 (87.750000%)
+
+Test set: Average loss: 0.2319, Accuracy: 8862.0/10000 (88.620000%)
+
+Epoch 146: Model weights saved to checkpoints/lwenet_epoch_146.pkl
+Current learning rate: 0.0001
+Train Epoch: 147 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.293315
+Train Epoch: 147 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.123613
+Train Epoch: 147 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.103465
+Train Epoch: 147 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.203196
+Train Epoch: 147 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.096183
+train Epoch: 147	avgLoss: 0.143089
+Valid set: Average loss: 0.2400, Accuracy: 1748.0/2000 (87.400000%)
+
+Test set: Average loss: 0.2386, Accuracy: 8854.0/10000 (88.540000%)
+
+Epoch 147: Model weights saved to checkpoints/lwenet_epoch_147.pkl
+Current learning rate: 0.0001
+Train Epoch: 148 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.228390
+Train Epoch: 148 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.109184
+Train Epoch: 148 [2400/4000 (60%)]	train_accuracy: 0.812500	Loss: 0.296851
+Train Epoch: 148 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.207884
+Train Epoch: 148 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.196077
+train Epoch: 148	avgLoss: 0.145225
+Valid set: Average loss: 0.2347, Accuracy: 1760.0/2000 (88.000000%)
+
+Test set: Average loss: 0.2326, Accuracy: 8861.0/10000 (88.610000%)
+
+Epoch 148: Model weights saved to checkpoints/lwenet_epoch_148.pkl
+Current learning rate: 0.0001
+Train Epoch: 149 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.132442
+Train Epoch: 149 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.214055
+Train Epoch: 149 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.131641
+Train Epoch: 149 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.121105
+Train Epoch: 149 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.065433
+train Epoch: 149	avgLoss: 0.141727
+Valid set: Average loss: 0.2491, Accuracy: 1761.0/2000 (88.050000%)
+
+Test set: Average loss: 0.2460, Accuracy: 8839.0/10000 (88.390000%)
+
+Epoch 149: Model weights saved to checkpoints/lwenet_epoch_149.pkl
+Current learning rate: 0.0001
+Train Epoch: 150 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.167075
+Train Epoch: 150 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.148553
+Train Epoch: 150 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.093245
+Train Epoch: 150 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.120810
+Train Epoch: 150 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.144099
+train Epoch: 150	avgLoss: 0.143389
+Valid set: Average loss: 0.2283, Accuracy: 1767.0/2000 (88.350000%)
+
+Test set: Average loss: 0.2279, Accuracy: 8884.0/10000 (88.840000%)
+
+Epoch 150: Model weights saved to checkpoints/lwenet_epoch_150.pkl
+Current learning rate: 0.0001
+Train Epoch: 151 [800/4000 (20%)]	train_accuracy: 1.000000	Loss: 0.063510
+Train Epoch: 151 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.166212
+Train Epoch: 151 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.072872
+Train Epoch: 151 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.115877
+Train Epoch: 151 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.188835
+train Epoch: 151	avgLoss: 0.142544
+Valid set: Average loss: 0.2423, Accuracy: 1768.0/2000 (88.400000%)
+
+Test set: Average loss: 0.2374, Accuracy: 8860.0/10000 (88.600000%)
+
+Epoch 151: Model weights saved to checkpoints/lwenet_epoch_151.pkl
+Current learning rate: 0.0001
+Train Epoch: 152 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.109177
+Train Epoch: 152 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.199933
+Train Epoch: 152 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.127759
+Train Epoch: 152 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.126307
+Train Epoch: 152 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.200026
+train Epoch: 152	avgLoss: 0.144047
+Valid set: Average loss: 0.2324, Accuracy: 1757.0/2000 (87.850000%)
+
+Test set: Average loss: 0.2308, Accuracy: 8870.0/10000 (88.700000%)
+
+Epoch 152: Model weights saved to checkpoints/lwenet_epoch_152.pkl
+Current learning rate: 0.0001
+Train Epoch: 153 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.083435
+Train Epoch: 153 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.087318
+Train Epoch: 153 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.088914
+Train Epoch: 153 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.191879
+Train Epoch: 153 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.054936
+train Epoch: 153	avgLoss: 0.148118
+Valid set: Average loss: 0.2406, Accuracy: 1765.0/2000 (88.250000%)
+
+Test set: Average loss: 0.2357, Accuracy: 8852.0/10000 (88.520000%)
+
+Epoch 153: Model weights saved to checkpoints/lwenet_epoch_153.pkl
+Current learning rate: 0.0001
+Train Epoch: 154 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.246216
+Train Epoch: 154 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.097150
+Train Epoch: 154 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.122827
+Train Epoch: 154 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.104811
+Train Epoch: 154 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.253679
+train Epoch: 154	avgLoss: 0.144299
+Valid set: Average loss: 0.2382, Accuracy: 1764.0/2000 (88.200000%)
+
+Test set: Average loss: 0.2359, Accuracy: 8862.0/10000 (88.620000%)
+
+Epoch 154: Model weights saved to checkpoints/lwenet_epoch_154.pkl
+Current learning rate: 0.0001
+Train Epoch: 155 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.145301
+Train Epoch: 155 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.102364
+Train Epoch: 155 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.081506
+Train Epoch: 155 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.130164
+Train Epoch: 155 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.103183
+train Epoch: 155	avgLoss: 0.145291
+Valid set: Average loss: 0.2363, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2373, Accuracy: 8872.0/10000 (88.720000%)
+
+Epoch 155: Model weights saved to checkpoints/lwenet_epoch_155.pkl
+Current learning rate: 0.0001
+Train Epoch: 156 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.075314
+Train Epoch: 156 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.117979
+Train Epoch: 156 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.206222
+Train Epoch: 156 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.125497
+Train Epoch: 156 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.088773
+train Epoch: 156	avgLoss: 0.140814
+Valid set: Average loss: 0.2333, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2361, Accuracy: 8869.0/10000 (88.690000%)
+
+Epoch 156: Model weights saved to checkpoints/lwenet_epoch_156.pkl
+Current learning rate: 0.0001
+Train Epoch: 157 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.103200
+Train Epoch: 157 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.093582
+Train Epoch: 157 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.154574
+Train Epoch: 157 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.120695
+Train Epoch: 157 [4000/4000 (100%)]	train_accuracy: 1.000000	Loss: 0.057052
+train Epoch: 157	avgLoss: 0.140963
+Valid set: Average loss: 0.2368, Accuracy: 1766.0/2000 (88.300000%)
+
+Test set: Average loss: 0.2344, Accuracy: 8872.0/10000 (88.720000%)
+
+Epoch 157: Model weights saved to checkpoints/lwenet_epoch_157.pkl
+Current learning rate: 0.0001
+Train Epoch: 158 [800/4000 (20%)]	train_accuracy: 1.000000	Loss: 0.033005
+Train Epoch: 158 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.089642
+Train Epoch: 158 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.176299
+Train Epoch: 158 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.136287
+Train Epoch: 158 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.036805
+train Epoch: 158	avgLoss: 0.140403
+Valid set: Average loss: 0.2398, Accuracy: 1767.0/2000 (88.350000%)
+
+Test set: Average loss: 0.2392, Accuracy: 8852.0/10000 (88.520000%)
+
+Epoch 158: Model weights saved to checkpoints/lwenet_epoch_158.pkl
+Current learning rate: 0.0001
+Train Epoch: 159 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.097994
+Train Epoch: 159 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.116928
+Train Epoch: 159 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.097747
+Train Epoch: 159 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.086499
+Train Epoch: 159 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.134462
+train Epoch: 159	avgLoss: 0.141601
+Valid set: Average loss: 0.2388, Accuracy: 1764.0/2000 (88.200000%)
+
+Test set: Average loss: 0.2344, Accuracy: 8864.0/10000 (88.640000%)
+
+Epoch 159: Model weights saved to checkpoints/lwenet_epoch_159.pkl
+Current learning rate: 0.0001
+Train Epoch: 160 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.124838
+Train Epoch: 160 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.179593
+Train Epoch: 160 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.260294
+Train Epoch: 160 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.152702
+Train Epoch: 160 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.073947
+train Epoch: 160	avgLoss: 0.139466
+Valid set: Average loss: 0.2326, Accuracy: 1755.0/2000 (87.750000%)
+
+Test set: Average loss: 0.2355, Accuracy: 8888.0/10000 (88.880000%)
+
+Epoch 160: Model weights saved to checkpoints/lwenet_epoch_160.pkl
+Current learning rate: 0.0001
+Train Epoch: 161 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.149544
+Train Epoch: 161 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.303808
+Train Epoch: 161 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.091886
+Train Epoch: 161 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.055724
+Train Epoch: 161 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.055406
+train Epoch: 161	avgLoss: 0.140540
+Valid set: Average loss: 0.2492, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2441, Accuracy: 8841.0/10000 (88.410000%)
+
+Epoch 161: Model weights saved to checkpoints/lwenet_epoch_161.pkl
+Current learning rate: 0.0001
+Train Epoch: 162 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.198771
+Train Epoch: 162 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.114158
+Train Epoch: 162 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.127564
+Train Epoch: 162 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.153478
+Train Epoch: 162 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.146011
+train Epoch: 162	avgLoss: 0.144772
+Valid set: Average loss: 0.2331, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2368, Accuracy: 8874.0/10000 (88.740000%)
+
+Epoch 162: Model weights saved to checkpoints/lwenet_epoch_162.pkl
+Current learning rate: 0.0001
+Train Epoch: 163 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.203118
+Train Epoch: 163 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.129535
+Train Epoch: 163 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.092861
+Train Epoch: 163 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.247436
+Train Epoch: 163 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.136261
+train Epoch: 163	avgLoss: 0.140871
+Valid set: Average loss: 0.2366, Accuracy: 1750.0/2000 (87.500000%)
+
+Test set: Average loss: 0.2359, Accuracy: 8882.0/10000 (88.820000%)
+
+Epoch 163: Model weights saved to checkpoints/lwenet_epoch_163.pkl
+Current learning rate: 0.0001
+Train Epoch: 164 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.078080
+Train Epoch: 164 [1600/4000 (40%)]	train_accuracy: 0.843750	Loss: 0.228113
+Train Epoch: 164 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.120839
+Train Epoch: 164 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.216897
+Train Epoch: 164 [4000/4000 (100%)]	train_accuracy: 1.000000	Loss: 0.056784
+train Epoch: 164	avgLoss: 0.144413
+Valid set: Average loss: 0.2338, Accuracy: 1763.0/2000 (88.150000%)
+
+Test set: Average loss: 0.2386, Accuracy: 8866.0/10000 (88.660000%)
+
+Epoch 164: Model weights saved to checkpoints/lwenet_epoch_164.pkl
+Current learning rate: 0.0001
+Train Epoch: 165 [800/4000 (20%)]	train_accuracy: 1.000000	Loss: 0.014386
+Train Epoch: 165 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.165036
+Train Epoch: 165 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.206942
+Train Epoch: 165 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.034852
+Train Epoch: 165 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.128544
+train Epoch: 165	avgLoss: 0.143199
+Valid set: Average loss: 0.2456, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2433, Accuracy: 8839.0/10000 (88.390000%)
+
+Epoch 165: Model weights saved to checkpoints/lwenet_epoch_165.pkl
+Current learning rate: 0.0001
+Train Epoch: 166 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.095782
+Train Epoch: 166 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.065921
+Train Epoch: 166 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.090277
+Train Epoch: 166 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.109868
+Train Epoch: 166 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.130549
+train Epoch: 166	avgLoss: 0.141763
+Valid set: Average loss: 0.2459, Accuracy: 1756.0/2000 (87.800000%)
+
+Test set: Average loss: 0.2438, Accuracy: 8839.0/10000 (88.390000%)
+
+Epoch 166: Model weights saved to checkpoints/lwenet_epoch_166.pkl
+Current learning rate: 0.0001
+Train Epoch: 167 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.155801
+Train Epoch: 167 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.161025
+Train Epoch: 167 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.017120
+Train Epoch: 167 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.100671
+Train Epoch: 167 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.076235
+train Epoch: 167	avgLoss: 0.143614
+Valid set: Average loss: 0.2318, Accuracy: 1762.0/2000 (88.100000%)
+
+Test set: Average loss: 0.2335, Accuracy: 8877.0/10000 (88.770000%)
+
+Epoch 167: Model weights saved to checkpoints/lwenet_epoch_167.pkl
+Current learning rate: 0.0001
+Train Epoch: 168 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.080324
+Train Epoch: 168 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.112271
+Train Epoch: 168 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.151478
+Train Epoch: 168 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.105969
+Train Epoch: 168 [4000/4000 (100%)]	train_accuracy: 1.000000	Loss: 0.072279
+train Epoch: 168	avgLoss: 0.142754
+Valid set: Average loss: 0.2336, Accuracy: 1757.0/2000 (87.850000%)
+
+Test set: Average loss: 0.2352, Accuracy: 8870.0/10000 (88.700000%)
+
+Epoch 168: Model weights saved to checkpoints/lwenet_epoch_168.pkl
+Current learning rate: 0.0001
+Train Epoch: 169 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.152933
+Train Epoch: 169 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.139393
+Train Epoch: 169 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.164354
+Train Epoch: 169 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.134600
+Train Epoch: 169 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.100175
+train Epoch: 169	avgLoss: 0.137748
+Valid set: Average loss: 0.2290, Accuracy: 1762.0/2000 (88.100000%)
+
+Test set: Average loss: 0.2308, Accuracy: 8875.0/10000 (88.750000%)
+
+Epoch 169: Model weights saved to checkpoints/lwenet_epoch_169.pkl
+Current learning rate: 0.0001
+Train Epoch: 170 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.130517
+Train Epoch: 170 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.081945
+Train Epoch: 170 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.148588
+Train Epoch: 170 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.044689
+Train Epoch: 170 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.186687
+train Epoch: 170	avgLoss: 0.137319
+Valid set: Average loss: 0.2479, Accuracy: 1756.0/2000 (87.800000%)
+
+Test set: Average loss: 0.2399, Accuracy: 8858.0/10000 (88.580000%)
+
+Epoch 170: Model weights saved to checkpoints/lwenet_epoch_170.pkl
+Current learning rate: 0.0001
+Train Epoch: 171 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.071553
+Train Epoch: 171 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.219951
+Train Epoch: 171 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.167009
+Train Epoch: 171 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.103573
+Train Epoch: 171 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.128655
+train Epoch: 171	avgLoss: 0.141445
+Valid set: Average loss: 0.2305, Accuracy: 1761.0/2000 (88.050000%)
+
+Test set: Average loss: 0.2335, Accuracy: 8877.0/10000 (88.770000%)
+
+Epoch 171: Model weights saved to checkpoints/lwenet_epoch_171.pkl
+Current learning rate: 0.0001
+Train Epoch: 172 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.156685
+Train Epoch: 172 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.116961
+Train Epoch: 172 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.185353
+Train Epoch: 172 [3200/4000 (80%)]	train_accuracy: 0.843750	Loss: 0.378002
+Train Epoch: 172 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.130035
+train Epoch: 172	avgLoss: 0.141061
+Valid set: Average loss: 0.2290, Accuracy: 1763.0/2000 (88.150000%)
+
+Test set: Average loss: 0.2294, Accuracy: 8860.0/10000 (88.600000%)
+
+Epoch 172: Model weights saved to checkpoints/lwenet_epoch_172.pkl
+Current learning rate: 0.0001
+Train Epoch: 173 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.103253
+Train Epoch: 173 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.129694
+Train Epoch: 173 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.294120
+Train Epoch: 173 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.170263
+Train Epoch: 173 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.122294
+train Epoch: 173	avgLoss: 0.143626
+Valid set: Average loss: 0.2334, Accuracy: 1756.0/2000 (87.800000%)
+
+Test set: Average loss: 0.2363, Accuracy: 8866.0/10000 (88.660000%)
+
+Epoch 173: Model weights saved to checkpoints/lwenet_epoch_173.pkl
+Current learning rate: 0.0001
+Train Epoch: 174 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.183981
+Train Epoch: 174 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.088225
+Train Epoch: 174 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.188160
+Train Epoch: 174 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.118419
+Train Epoch: 174 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.111872
+train Epoch: 174	avgLoss: 0.140333
+Valid set: Average loss: 0.2397, Accuracy: 1755.0/2000 (87.750000%)
+
+Test set: Average loss: 0.2394, Accuracy: 8873.0/10000 (88.730000%)
+
+Epoch 174: Model weights saved to checkpoints/lwenet_epoch_174.pkl
+Current learning rate: 0.0001
+Train Epoch: 175 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.126808
+Train Epoch: 175 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.088718
+Train Epoch: 175 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.091706
+Train Epoch: 175 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.120269
+Train Epoch: 175 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.172741
+train Epoch: 175	avgLoss: 0.142563
+Valid set: Average loss: 0.2410, Accuracy: 1767.0/2000 (88.350000%)
+
+Test set: Average loss: 0.2425, Accuracy: 8847.0/10000 (88.470000%)
+
+Epoch 175: Model weights saved to checkpoints/lwenet_epoch_175.pkl
+Current learning rate: 0.0001
+Train Epoch: 176 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.152516
+Train Epoch: 176 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.129658
+Train Epoch: 176 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.183824
+Train Epoch: 176 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.142176
+Train Epoch: 176 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.117500
+train Epoch: 176	avgLoss: 0.145097
+Valid set: Average loss: 0.2337, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2320, Accuracy: 8882.0/10000 (88.820000%)
+
+Epoch 176: Model weights saved to checkpoints/lwenet_epoch_176.pkl
+Current learning rate: 0.0001
+Train Epoch: 177 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.136342
+Train Epoch: 177 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.180851
+Train Epoch: 177 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.083249
+Train Epoch: 177 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.180083
+Train Epoch: 177 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.136120
+train Epoch: 177	avgLoss: 0.142930
+Valid set: Average loss: 0.2388, Accuracy: 1770.0/2000 (88.500000%)
+
+Test set: Average loss: 0.2430, Accuracy: 8868.0/10000 (88.680000%)
+
+Epoch 177: Model weights saved to checkpoints/lwenet_epoch_177.pkl
+Current learning rate: 0.0001
+Train Epoch: 178 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.133163
+Train Epoch: 178 [1600/4000 (40%)]	train_accuracy: 1.000000	Loss: 0.045845
+Train Epoch: 178 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.166030
+Train Epoch: 178 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.150230
+Train Epoch: 178 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.130916
+train Epoch: 178	avgLoss: 0.139355
+Valid set: Average loss: 0.2391, Accuracy: 1764.0/2000 (88.200000%)
+
+Test set: Average loss: 0.2396, Accuracy: 8855.0/10000 (88.550000%)
+
+Epoch 178: Model weights saved to checkpoints/lwenet_epoch_178.pkl
+Current learning rate: 0.0001
+Train Epoch: 179 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.229534
+Train Epoch: 179 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.164799
+Train Epoch: 179 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.240980
+Train Epoch: 179 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.259746
+Train Epoch: 179 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.116204
+train Epoch: 179	avgLoss: 0.138198
+Valid set: Average loss: 0.2353, Accuracy: 1765.0/2000 (88.250000%)
+
+Test set: Average loss: 0.2348, Accuracy: 8839.0/10000 (88.390000%)
+
+Epoch 179: Model weights saved to checkpoints/lwenet_epoch_179.pkl
+Current learning rate: 0.0001
+Train Epoch: 180 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.117217
+Train Epoch: 180 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.215540
+Train Epoch: 180 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.219417
+Train Epoch: 180 [3200/4000 (80%)]	train_accuracy: 0.781250	Loss: 0.356580
+Train Epoch: 180 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.241759
+train Epoch: 180	avgLoss: 0.139574
+Valid set: Average loss: 0.2319, Accuracy: 1761.0/2000 (88.050000%)
+
+Test set: Average loss: 0.2386, Accuracy: 8873.0/10000 (88.730000%)
+
+Epoch 180: Model weights saved to checkpoints/lwenet_epoch_180.pkl
+Current learning rate: 1e-05
+Train Epoch: 181 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.130458
+Train Epoch: 181 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.240234
+Train Epoch: 181 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.099797
+Train Epoch: 181 [3200/4000 (80%)]	train_accuracy: 0.812500	Loss: 0.302498
+Train Epoch: 181 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.136705
+train Epoch: 181	avgLoss: 0.143435
+Valid set: Average loss: 0.2350, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2358, Accuracy: 8878.0/10000 (88.780000%)
+
+Epoch 181: Model weights saved to checkpoints/lwenet_epoch_181.pkl
+Current learning rate: 1e-05
+Train Epoch: 182 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.071987
+Train Epoch: 182 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.057876
+Train Epoch: 182 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.059366
+Train Epoch: 182 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.157186
+Train Epoch: 182 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.229076
+train Epoch: 182	avgLoss: 0.142430
+Valid set: Average loss: 0.2295, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2356, Accuracy: 8873.0/10000 (88.730000%)
+
+Epoch 182: Model weights saved to checkpoints/lwenet_epoch_182.pkl
+Current learning rate: 1e-05
+Train Epoch: 183 [800/4000 (20%)]	train_accuracy: 0.781250	Loss: 0.353836
+Train Epoch: 183 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.133681
+Train Epoch: 183 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.090381
+Train Epoch: 183 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.028295
+Train Epoch: 183 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.113775
+train Epoch: 183	avgLoss: 0.142891
+Valid set: Average loss: 0.2350, Accuracy: 1770.0/2000 (88.500000%)
+
+Test set: Average loss: 0.2399, Accuracy: 8846.0/10000 (88.460000%)
+
+Epoch 183: Model weights saved to checkpoints/lwenet_epoch_183.pkl
+Current learning rate: 1e-05
+Train Epoch: 184 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.093806
+Train Epoch: 184 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.147254
+Train Epoch: 184 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.097712
+Train Epoch: 184 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.146392
+Train Epoch: 184 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.145228
+train Epoch: 184	avgLoss: 0.141524
+Valid set: Average loss: 0.2340, Accuracy: 1764.0/2000 (88.200000%)
+
+Test set: Average loss: 0.2367, Accuracy: 8886.0/10000 (88.860000%)
+
+Epoch 184: Model weights saved to checkpoints/lwenet_epoch_184.pkl
+Current learning rate: 1e-05
+Train Epoch: 185 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.138215
+Train Epoch: 185 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.132882
+Train Epoch: 185 [2400/4000 (60%)]	train_accuracy: 0.968750	Loss: 0.068481
+Train Epoch: 185 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.228789
+Train Epoch: 185 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.153040
+train Epoch: 185	avgLoss: 0.139295
+Valid set: Average loss: 0.2344, Accuracy: 1765.0/2000 (88.250000%)
+
+Test set: Average loss: 0.2381, Accuracy: 8867.0/10000 (88.670000%)
+
+Epoch 185: Model weights saved to checkpoints/lwenet_epoch_185.pkl
+Current learning rate: 1e-05
+Train Epoch: 186 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.208653
+Train Epoch: 186 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.091142
+Train Epoch: 186 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.193836
+Train Epoch: 186 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.142026
+Train Epoch: 186 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.127528
+train Epoch: 186	avgLoss: 0.140443
+Valid set: Average loss: 0.2373, Accuracy: 1765.0/2000 (88.250000%)
+
+Test set: Average loss: 0.2419, Accuracy: 8853.0/10000 (88.530000%)
+
+Epoch 186: Model weights saved to checkpoints/lwenet_epoch_186.pkl
+Current learning rate: 1e-05
+Train Epoch: 187 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.122945
+Train Epoch: 187 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.120112
+Train Epoch: 187 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.033176
+Train Epoch: 187 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.114703
+Train Epoch: 187 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.180443
+train Epoch: 187	avgLoss: 0.141739
+Valid set: Average loss: 0.2361, Accuracy: 1767.0/2000 (88.350000%)
+
+Test set: Average loss: 0.2395, Accuracy: 8864.0/10000 (88.640000%)
+
+Epoch 187: Model weights saved to checkpoints/lwenet_epoch_187.pkl
+Current learning rate: 1e-05
+Train Epoch: 188 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.171940
+Train Epoch: 188 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.135298
+Train Epoch: 188 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.171585
+Train Epoch: 188 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.091589
+Train Epoch: 188 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.220844
+train Epoch: 188	avgLoss: 0.141324
+Valid set: Average loss: 0.2330, Accuracy: 1762.0/2000 (88.100000%)
+
+Test set: Average loss: 0.2390, Accuracy: 8874.0/10000 (88.740000%)
+
+Epoch 188: Model weights saved to checkpoints/lwenet_epoch_188.pkl
+Current learning rate: 1e-05
+Train Epoch: 189 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.140340
+Train Epoch: 189 [1600/4000 (40%)]	train_accuracy: 1.000000	Loss: 0.063285
+Train Epoch: 189 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.172816
+Train Epoch: 189 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.092117
+Train Epoch: 189 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.149397
+train Epoch: 189	avgLoss: 0.139283
+Valid set: Average loss: 0.2363, Accuracy: 1768.0/2000 (88.400000%)
+
+Test set: Average loss: 0.2367, Accuracy: 8871.0/10000 (88.710000%)
+
+Epoch 189: Model weights saved to checkpoints/lwenet_epoch_189.pkl
+Current learning rate: 1e-05
+Train Epoch: 190 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.148416
+Train Epoch: 190 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.080291
+Train Epoch: 190 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.139930
+Train Epoch: 190 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.099506
+Train Epoch: 190 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.110727
+train Epoch: 190	avgLoss: 0.143910
+Valid set: Average loss: 0.2385, Accuracy: 1765.0/2000 (88.250000%)
+
+Test set: Average loss: 0.2380, Accuracy: 8878.0/10000 (88.780000%)
+
+Epoch 190: Model weights saved to checkpoints/lwenet_epoch_190.pkl
+Current learning rate: 1e-05
+Train Epoch: 191 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.071430
+Train Epoch: 191 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.132194
+Train Epoch: 191 [2400/4000 (60%)]	train_accuracy: 1.000000	Loss: 0.036311
+Train Epoch: 191 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.259346
+Train Epoch: 191 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.132950
+train Epoch: 191	avgLoss: 0.141237
+Valid set: Average loss: 0.2377, Accuracy: 1768.0/2000 (88.400000%)
+
+Test set: Average loss: 0.2411, Accuracy: 8854.0/10000 (88.540000%)
+
+Epoch 191: Model weights saved to checkpoints/lwenet_epoch_191.pkl
+Current learning rate: 1e-05
+Train Epoch: 192 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.133896
+Train Epoch: 192 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.193974
+Train Epoch: 192 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.171322
+Train Epoch: 192 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.180886
+Train Epoch: 192 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.197147
+train Epoch: 192	avgLoss: 0.141658
+Valid set: Average loss: 0.2340, Accuracy: 1763.0/2000 (88.150000%)
+
+Test set: Average loss: 0.2390, Accuracy: 8872.0/10000 (88.720000%)
+
+Epoch 192: Model weights saved to checkpoints/lwenet_epoch_192.pkl
+Current learning rate: 1e-05
+Train Epoch: 193 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.105977
+Train Epoch: 193 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.117098
+Train Epoch: 193 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.212145
+Train Epoch: 193 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.149774
+Train Epoch: 193 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.177859
+train Epoch: 193	avgLoss: 0.135607
+Valid set: Average loss: 0.2375, Accuracy: 1761.0/2000 (88.050000%)
+
+Test set: Average loss: 0.2355, Accuracy: 8855.0/10000 (88.550000%)
+
+Epoch 193: Model weights saved to checkpoints/lwenet_epoch_193.pkl
+Current learning rate: 1e-05
+Train Epoch: 194 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.115409
+Train Epoch: 194 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.096332
+Train Epoch: 194 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.108706
+Train Epoch: 194 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.071113
+Train Epoch: 194 [4000/4000 (100%)]	train_accuracy: 0.906250	Loss: 0.136313
+train Epoch: 194	avgLoss: 0.141423
+Valid set: Average loss: 0.2368, Accuracy: 1760.0/2000 (88.000000%)
+
+Test set: Average loss: 0.2424, Accuracy: 8864.0/10000 (88.640000%)
+
+Epoch 194: Model weights saved to checkpoints/lwenet_epoch_194.pkl
+Current learning rate: 1e-05
+Train Epoch: 195 [800/4000 (20%)]	train_accuracy: 0.906250	Loss: 0.270849
+Train Epoch: 195 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.179998
+Train Epoch: 195 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.228226
+Train Epoch: 195 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.111006
+Train Epoch: 195 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.246504
+train Epoch: 195	avgLoss: 0.137203
+Valid set: Average loss: 0.2392, Accuracy: 1764.0/2000 (88.200000%)
+
+Test set: Average loss: 0.2421, Accuracy: 8858.0/10000 (88.580000%)
+
+Epoch 195: Model weights saved to checkpoints/lwenet_epoch_195.pkl
+Current learning rate: 1e-05
+Train Epoch: 196 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.083912
+Train Epoch: 196 [1600/4000 (40%)]	train_accuracy: 0.906250	Loss: 0.175937
+Train Epoch: 196 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.225013
+Train Epoch: 196 [3200/4000 (80%)]	train_accuracy: 0.968750	Loss: 0.064199
+Train Epoch: 196 [4000/4000 (100%)]	train_accuracy: 0.875000	Loss: 0.200252
+train Epoch: 196	avgLoss: 0.142381
+Valid set: Average loss: 0.2359, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2380, Accuracy: 8865.0/10000 (88.650000%)
+
+Epoch 196: Model weights saved to checkpoints/lwenet_epoch_196.pkl
+Current learning rate: 1e-05
+Train Epoch: 197 [800/4000 (20%)]	train_accuracy: 0.875000	Loss: 0.265566
+Train Epoch: 197 [1600/4000 (40%)]	train_accuracy: 0.875000	Loss: 0.199521
+Train Epoch: 197 [2400/4000 (60%)]	train_accuracy: 0.937500	Loss: 0.098904
+Train Epoch: 197 [3200/4000 (80%)]	train_accuracy: 0.937500	Loss: 0.176086
+Train Epoch: 197 [4000/4000 (100%)]	train_accuracy: 0.937500	Loss: 0.105478
+train Epoch: 197	avgLoss: 0.143208
+Valid set: Average loss: 0.2421, Accuracy: 1763.0/2000 (88.150000%)
+
+Test set: Average loss: 0.2461, Accuracy: 8855.0/10000 (88.550000%)
+
+Epoch 197: Model weights saved to checkpoints/lwenet_epoch_197.pkl
+Current learning rate: 1e-05
+Train Epoch: 198 [800/4000 (20%)]	train_accuracy: 0.968750	Loss: 0.204905
+Train Epoch: 198 [1600/4000 (40%)]	train_accuracy: 0.937500	Loss: 0.081438
+Train Epoch: 198 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.199518
+Train Epoch: 198 [3200/4000 (80%)]	train_accuracy: 1.000000	Loss: 0.040018
+Train Epoch: 198 [4000/4000 (100%)]	train_accuracy: 1.000000	Loss: 0.079820
+train Epoch: 198	avgLoss: 0.139544
+Valid set: Average loss: 0.2354, Accuracy: 1770.0/2000 (88.500000%)
+
+Test set: Average loss: 0.2405, Accuracy: 8865.0/10000 (88.650000%)
+
+Epoch 198: Model weights saved to checkpoints/lwenet_epoch_198.pkl
+Current learning rate: 1e-05
+Train Epoch: 199 [800/4000 (20%)]	train_accuracy: 0.937500	Loss: 0.166611
+Train Epoch: 199 [1600/4000 (40%)]	train_accuracy: 0.968750	Loss: 0.113160
+Train Epoch: 199 [2400/4000 (60%)]	train_accuracy: 0.906250	Loss: 0.149548
+Train Epoch: 199 [3200/4000 (80%)]	train_accuracy: 0.906250	Loss: 0.188337
+Train Epoch: 199 [4000/4000 (100%)]	train_accuracy: 0.968750	Loss: 0.070356
+train Epoch: 199	avgLoss: 0.136465
+Valid set: Average loss: 0.2346, Accuracy: 1759.0/2000 (87.950000%)
+
+Test set: Average loss: 0.2316, Accuracy: 8861.0/10000 (88.610000%)
+
+Epoch 199: Model weights saved to checkpoints/lwenet_epoch_199.pkl
+Current learning rate: 1e-05
+Train Epoch: 200 [800/4000 (20%)]	train_accuracy: 0.843750	Loss: 0.262330
+Train Epoch: 200 [1600/4000 (40%)]	train_accuracy: 1.000000	Loss: 0.031287
+Train Epoch: 200 [2400/4000 (60%)]	train_accuracy: 0.875000	Loss: 0.183879
+Train Epoch: 200 [3200/4000 (80%)]	train_accuracy: 0.875000	Loss: 0.223670
+Train Epoch: 200 [4000/4000 (100%)]	train_accuracy: 0.843750	Loss: 0.337192
+train Epoch: 200	avgLoss: 0.138556
+Valid set: Average loss: 0.2339, Accuracy: 1758.0/2000 (87.900000%)
+
+Test set: Average loss: 0.2372, Accuracy: 8892.0/10000 (88.920000%)
+
+Epoch 200: Model weights saved to checkpoints/lwenet_epoch_200.pkl
+Total training time: 10668.83 seconds
