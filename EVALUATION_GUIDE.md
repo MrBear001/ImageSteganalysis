@@ -19,7 +19,7 @@ python plot_training_logs.py
 也可以手动指定日志：
 
 ```bash
-python plot_training_logs.py --logs log/suni0.2-train.log log/suni0.4-train.log log/wow0.4-train.log
+python plot_training_logs.py --logs log/wow0.2-train.log
 ```
 
 默认输出目录：
@@ -47,7 +47,7 @@ evaluation_outputs/log_plots/
 示例：
 
 ```bash
-python evaluate_experiment.py --weights "checkpoints-suni0.2\lwenet_epoch_192.pkl" --cover-dir "D:\毕业设计\dataset\S-UNIWARD\0.2bpp\test\cover" --stego-dir "D:\毕业设计\dataset\S-UNIWARD\0.2bpp\test\stego" --output-dir "evaluation_outputs/suni0.2_eval"
+python evaluate_experiment.py --weights "checkpoints-wow0.4\lwenet_epoch_200.pkl" --cover-dir "D:\毕业设计\dataset\WOW\0.4bpp\test\cover" --stego-dir "D:\毕业设计\dataset\WOW\0.4bpp\test\stego" --output-dir "evaluation_outputs/wow0.4_eval"
 ```
 
 默认输出内容：
