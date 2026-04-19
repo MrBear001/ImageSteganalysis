@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>图像隐写分析系统</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">LWENet Steganalysis System</span>
+        <h1>图像隐写分析系统</h1>
+        <p>
+          基于CNN的图像隐写轻量化检测界面。用户先选择检测模型，再上传待测图片，
+          系统会输出是否疑似隐写、隐写概率与载体概率。
+        </p>
+      </div>
+    </header>
+
+    <main class="content-grid">
+      <section class="glass-card control-panel">
+        <h2>开始检测</h2>
+        <form id="detect-form">
+          <label class="field">
+            <span>检测模型</span>
+            <select id="model-select" name="model_id" required>
+              <option value="">正在加载可用模型...</option>
+            </select>
+          </label>
+
+          <label class="field upload-box" for="image-input">
+            <input id="image-input" name="image" type="file" accept="image/*,.pgm" required>
+            <span class="upload-title">上传待检测图片</span>
+            <span class="upload-hint">支持常见图片格式与 `.pgm`，建议使用单通道灰度图。</span>
+          </label>
+
+          <button id="submit-button" type="submit">执行检测</button>
+        </form>
+      </section>
+
+      <section class="glass-card preview-panel">
+        <div class="preview-header">
+          <h2>图片预览</h2>
+          <span id="file-name">尚未选择图片</span>
+        </div>
+        <div class="image-frame">
+          <img id="preview-image" alt="待检测图片预览">
+          <canvas id="preview-canvas" class="preview-canvas"></canvas>
+          <div id="empty-preview" class="empty-preview">上传图片后将在这里显示预览</div>
+        </div>
+      </section>
+
+      <section class="glass-card result-panel">
+        <div class="result-header">
+          <h2>检测结果</h2>
+          <span id="status-pill" class="status-pill neutral">等待检测</span>
+        </div>
+
+        <div id="result-empty" class="result-empty">
+          结果区域会展示预测类别、隐写概率、载体概率和所用模型信息。
+        </div>
+
+        <div id="result-content" class="result-content hidden">
+          <div class="result-primary">
+            <div class="primary-label">预测结论</div>
+            <div id="prediction-text" class="prediction-text"></div>
+            <div id="model-text" class="model-text"></div>
+          </div>
+
+          <div class="metric-block">
+            <div class="metric">
+              <span>隐写概率</span>
+              <strong id="stego-probability">0.00%</strong>
+            </div>
+            <div class="progress-track">
+              <div id="stego-bar" class="progress-fill stego"></div>
+            </div>
+          </div>
+
+          <div class="metric-block">
+            <div class="metric">
+              <span>载体概率</span>
+              <strong id="cover-probability">0.00%</strong>
+            </div>
+            <div class="progress-track">
+              <div id="cover-bar" class="progress-fill cover"></div>
+            </div>
+          </div>
+
+          <div class="detail-grid">
+            <div class="detail-card">
+              <span>推理设备</span>
+              <strong id="device-text">-</strong>
+            </div>
+            <div class="detail-card">
+              <span>置信度</span>
+              <strong id="confidence-text">-</strong>
+            </div>
+            <div class="detail-card">
+              <span>预处理</span>
+              <strong id="preprocess-text">-</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-line">毕业设计作品</div>
+      <div class="footer-meta">南京信息工程大学 · 熊方杰 · 基于CNN的图像隐写分析系统设计与实现</div>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
