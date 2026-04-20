@@ -1,5 +1,5 @@
 experiment,epochs,best_valid_epoch,best_valid_accuracy,best_test_epoch,best_test_accuracy,final_test_accuracy,final_test_loss,training_time_seconds
 suni0.2,200,141,80.05,170,80.15,79.35,0.3808,20916.44
 suni0.4,200,86,88.55,200,88.92,88.92,0.2372,10668.83
-wow0.2,102,99,83.3,87,85.25,83.25,0.3107
+wow0.2,102,99,83.3,87,85.25,83.25,0.3107,
 wow0.4,200,181,90.25,142,90.24,89.92,0.2023,10255.14

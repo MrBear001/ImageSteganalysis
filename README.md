@@ -42,9 +42,6 @@
 - `utils.py`
   数据集加载、数据增强和张量转换等工具函数。
 
-- `test_metrics.py`
-  早期单模型测试脚本，可输出 Accuracy、AUC 和 ROC 曲线。
-
 - `plot_training_logs.py`
   训练日志可视化脚本，用于解析日志并生成训练曲线、对比图和汇总表。
 
@@ -203,16 +200,6 @@ python evaluate_experiment.py --weights "checkpoints-wow0.4\lwenet_epoch_200.pkl
 - `probability_histogram.png`
 
 这些结果适合直接作为论文中的实验支撑材料。
-
-### 5.3 旧版测试脚本
-
-如果只需要做简单的 Accuracy 和 AUC 测试，也可以使用原有脚本：
-
-```bash
-python test_metrics.py --weights "checkpoints-suni0.2\lwenet_epoch_192.pkl" --cover-dir "你的cover路径" --stego-dir "你的stego路径"
-```
-
-不过从论文写作和结果完整性角度，建议优先使用 `evaluate_experiment.py`。
 
 ## 6. 当前实验资源说明
 
