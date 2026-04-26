@@ -69,6 +69,36 @@ body {
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
 }
 
+.hero-nav {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  border-color: rgba(59, 130, 246, 0.35);
+}
+
+.nav-link.active {
+  color: #1d4ed8;
+  border-color: rgba(59, 130, 246, 0.35);
+  background: rgba(59, 130, 246, 0.10);
+}
+
 .glass-card {
   background: var(--card-bg);
   backdrop-filter: blur(18px);
@@ -354,6 +384,191 @@ button:disabled {
   text-align: center;
 }
 
+.experiment-layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+.experiment-overview {
+  grid-column: span 12;
+  padding: 24px;
+}
+
+.experiment-filter-panel {
+  grid-column: span 12;
+  padding: 24px;
+}
+
+.chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  width: auto;
+  margin-top: 0;
+  box-shadow: none;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text-muted);
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.chip.active {
+  color: #1d4ed8;
+  border-color: rgba(59, 130, 246, 0.42);
+  background: rgba(59, 130, 246, 0.12);
+}
+
+.overview-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.overview-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.overview-card span {
+  font-size: 0.86rem;
+  color: var(--text-soft);
+}
+
+.overview-card strong {
+  display: block;
+  margin-top: 6px;
+  font-size: 1.45rem;
+}
+
+.overview-card p {
+  margin: 8px 0 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.experiment-chart {
+  grid-column: span 6;
+  padding: 24px;
+}
+
+.bars-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 92px;
+  gap: 10px;
+  align-items: center;
+}
+
+.bar-label {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.bar-track {
+  height: 12px;
+  border-radius: 999px;
+  background: rgba(226, 232, 240, 0.9);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+}
+
+.bar-value {
+  text-align: right;
+  font-size: 0.9rem;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.experiment-table-panel {
+  grid-column: span 12;
+  padding: 24px;
+}
+
+.experiment-images-panel {
+  grid-column: span 12;
+  padding: 24px;
+}
+
+.global-images {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.image-card {
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.image-card h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.image-card p {
+  margin: 8px 0 12px;
+  color: var(--text-soft);
+  font-size: 0.88rem;
+}
+
+.image-card img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  background: white;
+}
+
+.table-wrap {
+  width: 100%;
+  overflow: auto;
+}
+
+.metrics-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 960px;
+}
+
+.metrics-table th,
+.metrics-table td {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  font-size: 0.9rem;
+}
+
+.metrics-table th {
+  font-weight: 600;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.62);
+}
+
 .footer-line {
   margin-bottom: 6px;
   font-size: 0.85rem;
@@ -381,6 +596,27 @@ button:disabled {
   .detail-grid {
     grid-template-columns: 1fr;
   }
+
+  .overview-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experiment-chart {
+    grid-column: span 12;
+  }
+
+  .image-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bar-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .bar-value {
+    text-align: left;
+  }
 }
 
 @media (max-width: 640px) {
@@ -402,5 +638,13 @@ button:disabled {
 
   .image-frame {
     min-height: 280px;
+  }
+
+  .overview-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
   }
 }

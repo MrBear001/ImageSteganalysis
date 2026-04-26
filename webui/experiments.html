@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>系统成果 - 图像隐写分析系统</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">LWENet Experiment Dashboard</span>
+        <div class="hero-nav">
+          <a class="nav-link" href="/">在线检测</a>
+          <a class="nav-link active" href="/achievements">系统成果</a>
+        </div>
+        <h1>系统成果展示</h1>
+        <p>
+          展示 S-UNIWARD 与 WOW 在不同嵌入率下的训练与测试表现，
+          包括 Accuracy、Precision、Recall、F1、AUC、混淆矩阵等关键指标。
+        </p>
+      </div>
+    </header>
+
+    <main class="experiment-layout">
+      <section class="glass-card experiment-filter-panel">
+        <h2>算法筛选</h2>
+        <div id="algorithm-filters" class="chip-group"></div>
+      </section>
+
+      <section class="glass-card experiment-overview">
+        <div class="result-header">
+          <h2>核心指标对比</h2>
+          <span id="overview-pill" class="status-pill neutral">正在加载</span>
+        </div>
+        <div id="overview-cards" class="overview-cards"></div>
+      </section>
+
+      <section class="glass-card experiment-chart">
+        <h2>Final Test Accuracy 对比</h2>
+        <div id="accuracy-bars" class="bars-wrap"></div>
+      </section>
+
+      <section class="glass-card experiment-chart">
+        <h2>AUC 对比</h2>
+        <div id="auc-bars" class="bars-wrap"></div>
+      </section>
+
+      <section class="glass-card experiment-table-panel">
+        <h2>各实验详细结果</h2>
+        <div class="table-wrap">
+          <table class="metrics-table">
+            <thead>
+              <tr>
+                <th>实验</th>
+                <th>Epoch</th>
+                <th>Acc</th>
+                <th>Prec</th>
+                <th>Recall</th>
+                <th>F1</th>
+                <th>AUC</th>
+                <th>Loss</th>
+                <th>混淆矩阵(TN/FP/FN/TP)</th>
+              </tr>
+            </thead>
+            <tbody id="metrics-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="glass-card experiment-images-panel">
+        <h2>关键结果图</h2>
+        <div id="global-images" class="global-images"></div>
+        <div id="experiment-images" class="image-grid"></div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="footer-line">毕业设计作品</div>
+      <div class="footer-meta">南京信息工程大学 · 熊方杰 · 基于CNN的图像隐写分析系统设计与实现</div>
+    </footer>
+  </div>
+
+  <script src="/static/experiments.js"></script>
+</body>
+</html>
